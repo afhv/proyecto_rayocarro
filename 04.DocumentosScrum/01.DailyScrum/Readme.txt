@@ -1,0 +1,1 @@
+Se colocarán en esta carpeta los Daily Scrums realizados
