@@ -7,10 +7,7 @@ Home
 
 @section('content')
 <p><span style="font-weight: bold; color: red;">
-<?php echo "Hola a todos"; ?></style>.
+<?php echo "!Bienvenido!"; ?></style>.
 </p>
-@stop
-
-@section('msg_success')
-Esta quedando muy bien
+@include('welcome')
 @stop
