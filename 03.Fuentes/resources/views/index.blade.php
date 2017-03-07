@@ -5,9 +5,14 @@
 Home
 @stop
 
+@section('breadcrumb')
+<li><a href="#">Inicio</a></li>
+
+@stop
+
 @section('content')
 <p><span style="font-weight: bold; color: red;">
 <?php echo "!Bienvenido!"; ?></style>.
 </p>
-@include('welcome')
+
 @stop
