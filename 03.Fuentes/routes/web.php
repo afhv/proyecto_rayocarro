@@ -22,3 +22,10 @@ Route::get('/', function () {
 Route::get('/test', function() {
    return view('Prueba');
 });
+
+
+Route::get('RayoCarro/index', 'SitioController@index');
+/*
+Route::get('TallerEstatico/verCurriculum/{nombre}', 'SitioController@verCurriculum');
+Route::get('TallerEstatico/encuestaSatisfaccion', 'SitioController@encuestaSatisfaccion');
+*/
