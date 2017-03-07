@@ -79,9 +79,9 @@
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro E/S<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Nuevo</a></li>
-                                                    <li><a href="#">Consultar</a></li>
-                                                    <li><a href="#">Eliminar</a></li>
+                                                    <li><a href="\RegistroES\new">Nuevo</a></li>
+                                                    <li><a href="\RegistroES\search">Consultar</a></li>
+                                                    <li><a href="\RegistroES\del">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
