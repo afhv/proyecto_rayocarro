@@ -24,8 +24,6 @@ Route::get('/test', function() {
 });
 
 
-Route::get('RayoCarro/index', 'SitioController@index');
-
 Route::get('RegistroES/new', 'RegistroESController@new');
 Route::post('RegistroES/save', 'RegistroESController@save');
 
@@ -33,7 +31,3 @@ Route::get('RegistroES/search', 'RegistroESController@search');
 Route::get('RegistroES/find', 'RegistroESController@find');
 
 Route::get('RegistroES/delete', 'RegistroESController@delete');
-/*
-Route::get('TallerEstatico/verCurriculum/{nombre}', 'SitioController@verCurriculum');
-Route::get('TallerEstatico/encuestaSatisfaccion', 'SitioController@encuestaSatisfaccion');
-*/
