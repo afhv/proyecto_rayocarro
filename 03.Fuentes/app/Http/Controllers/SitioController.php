@@ -9,4 +9,7 @@ class SitioController extends Controller
      public function index() {
         return view('Sitio/index');
     }
+      public function encuestaSatisfaccion() {
+        return view('FormularioConductor.FormRegistro');
+    }
 }
