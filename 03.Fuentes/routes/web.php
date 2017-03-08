@@ -25,7 +25,8 @@ Route::get('/test', function() {
 
 
 Route::get('RayoCarro/index', 'SitioController@index');
-Route::get('Ejemplo', 'SitioController@encuestaSatisfaccion');
+Route::get('RayoCarro/RegistroConductor', 'SitioController@registroC');
+Route::get('RayoCarro/DeleteConductor', 'SitioController@deleteC');
 /*
 Route::get('TallerEstatico/verCurriculum/{nombre}', 'SitioController@verCurriculum');
 Route::get('TallerEstatico/encuestaSatisfaccion', 'SitioController@encuestaSatisfaccion');
