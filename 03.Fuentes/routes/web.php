@@ -31,3 +31,6 @@ Route::get('RegistroES/search', 'RegistroESController@search');
 Route::get('RegistroES/find', 'RegistroESController@find');
 
 Route::get('RegistroES/delete', 'RegistroESController@delete');
+
+Route::get('RayoCarro/index', 'SitioController@index');
+Route::get('Ejemplo', 'SitioController@encuestaSatisfaccion');
