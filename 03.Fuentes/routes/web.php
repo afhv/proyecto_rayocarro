@@ -33,8 +33,8 @@ Route::get('RegistroES/delete', 'RegistroESController@delete');
 Route::get('RayoCarro/index', 'SitioController@index');
 Route::get('RegistroC/save', 'GestionCondController@registroC');
 Route::get('RegistroC/delete', 'GestionCondController@deleteC');
-Route::get('RegistroC/find', 'GestionCondController@find');
-Route::get('RegistroC/search', 'GestionCondController@search');
+Route::get('RegistroC/find', 'GestionCondController@findC');
+Route::get('RegistroC/search', 'GestionCondController@searchC');
 
 
 Route::get('RegistroV/save', 'GestionVehController@registroV');
@@ -43,4 +43,7 @@ Route::get('RegistroV/find', 'GestionVehController@findV');
 Route::get('RegistroV/search', 'GestionVehController@searchV');
 
 
-Route::get('Ejemplo', 'SitioController@encuestaSatisfaccion');
+Route::get('RegistroU/save', 'GestionUserController@registroU');
+Route::get('RegistroU/delete', 'GestionUserController@deleteU');
+Route::get('RegistroU/find', 'GestionUserController@findU');
+Route::get('RegistroU/search', 'GestionUserController@searchU');

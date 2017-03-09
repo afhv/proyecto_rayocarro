@@ -7,21 +7,21 @@ use Illuminate\Http\Request;
 class GestionUserController extends Controller
 {
     //
-    public function registroC() {
-        return view('RegistroC.RegistroC');
+    public function registroU() {
+        return view('RegistroU.RegistroU');
 
       }
 
-    public function deleteC() {
-        return view('RegistroC.DeleteC');
+    public function deleteU() {
+        return view('RegistroU.DeleteU');
 
     }
 
-     public function find() {
-        return view('RegistroC.FindC');
+     public function findU() {
+        return view('RegistroU.FindU');
     }
 
-        public function search() {
-        return view('RegistroC.SearchC');
+        public function searchU() {
+        return view('RegistroU.SearchU');
     }
 }

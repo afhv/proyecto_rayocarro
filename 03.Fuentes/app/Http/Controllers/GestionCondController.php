@@ -21,11 +21,11 @@ class GestionCondController extends Controller
 
     }
 
-     public function find() {
+     public function findC() {
         return view('RegistroC.FindC');
     }
 
-        public function search() {
+        public function searchC() {
         return view('RegistroC.SearchC');
     }
 }

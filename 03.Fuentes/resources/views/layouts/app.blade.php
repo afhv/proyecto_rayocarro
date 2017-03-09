@@ -42,10 +42,10 @@
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Nuevo</a></li>
-                                                    <li><a href="#">Consultar</a></li>
-                                                    <li><a href="#">Modificar</a></li>
-                                                    <li><a href="#">Eliminar</a></li>
+                                                    <li><a href="\RegistroU\save">Nuevo</a></li>
+                                                    <li><a href="\RegistroU\find">Consultar</a></li>
+                                                    <li><a href="\RegistroU\search">Modificar</a></li>
+                                                    <li><a href="\RegistroU\delete">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown">

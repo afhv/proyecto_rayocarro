@@ -5,7 +5,7 @@ Nuevo Registro Vehiculo
 
 @section('breadcrumb')
 <li><a href="\">Inicio</a></li>
-<li><a href="\RegistroV\index">Registro Conductor</a></li>
+<li><a href="\RegistroV\index">Registro Vehiculo</a></li>
 <li class="active">Nuevo</li>
 @stop
 
@@ -18,7 +18,7 @@ Nuevo Registro Vehiculo
 
 <div class="alert alert-danger alert-dismissable">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>No se puede refistrar el Conductor</strong>
+    <strong>No se puede registrar el Conductor</strong>
     <strong>No todos los campos han sido debidamente diligenciados</strong>
 </div>
 

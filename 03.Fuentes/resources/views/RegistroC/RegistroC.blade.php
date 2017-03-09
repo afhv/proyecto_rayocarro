@@ -20,7 +20,7 @@ Nuevo Registro Conductores
 
 <div class="alert alert-danger alert-dismissable">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>No se puede refistrar el Conductor</strong>
+    <strong>No se puede registrar el Conductor</strong>
     <strong>No todos los campos han sido debidamente diligenciados</strong>
 </div>
 
