@@ -51,10 +51,10 @@
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vehiculos<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Nuevo</a></li>
-                                                    <li><a href="#">Consultar</a></li>
-                                                    <li><a href="#">Modificar</a></li>
-                                                    <li><a href="#">Eliminar</a></li>
+                                                    <li><a href="\RegistroV\save">Nuevo</a></li>
+                                                    <li><a href="\RegistroV\find">Consultar</a></li>
+                                                    <li><a href="\RegistroV\search">Modificar</a></li>
+                                                    <li><a href="\RegistroV\delete">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown">

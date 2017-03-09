@@ -1,20 +1,18 @@
 @extends('layouts.app')
-
-
 @section('content_title')
-Nuevo Registro Conductores
+Nuevo Registro Vehiculo
 @stop
 
 @section('breadcrumb')
 <li><a href="\">Inicio</a></li>
-<li><a href="\RegistroC\index">Registro Conductor</a></li>
+<li><a href="\RegistroV\index">Registro Conductor</a></li>
 <li class="active">Nuevo</li>
 @stop
 
 @section('content')
 
 <div class="alert alert-success alert-dismissable">
-    <a href="\RegistroC\save" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <a href="\RegistroV\save" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Conductor añadido con éxito</strong>
 </div>
 
@@ -24,80 +22,77 @@ Nuevo Registro Conductores
     <strong>No todos los campos han sido debidamente diligenciados</strong>
 </div>
 
-<form action="/RegistroC/save" method="post">
+<form action="/RegistroV/save" method="post">
 
     <div class="form-group">
         <div class="row">
             <div class="col-md-2">
-                <h3><label for="fecha" class="label label-primary">Fecha</label></h3>
+                <h3><label for="placa" class="label label-primary">Placa</label></h3>
             </div>
             <div class="col-md-4">
-                <input type="date" class="form-control" id="fecha">
+                <input type="text" class="form-control" id="placa">
             </div>
 
     </div>
-
-
-
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-2">
-                <h3><label for="nombre" class="label label-primary">Nombre</label></h3>
-            </div>
-            <div class="col-md-4">
-                <input type="text" class="form-control" id="nombre">
-            </div>
-            <div class="col-md-2">
-                <h3><label for="apellido" class="label label-primary">Apellido</label></h3>
-            </div>
-            <div class="col-md-4">
-                <input type="text" class="form-control" id="apellido">
-            </div>
-        </div>
     </div>
 
 
         <div class="form-group">
         <div class="row">
             <div class="col-md-2">
-                <h3><label for="tipo_doc" class="label label-primary">Tipo doc</label></h3>
+                <h3><label for="marca" class="label label-primary">Marca</label></h3>
             </div>
             <div class="col-md-8">
                 <select class="form-control" id="tipo_doc">
-                    <option value="1">C.C.</option>
-                    <option value="2">N.I.T.</option>
-                    <option value="3">D.N.I.</option>
-                    <option value="4">C.E.</option>
+                    <option value="1">Mazda</option>
+                    <option value="2">Chevrolet</option>
+                    <option value="3">VW</option>
+                    <option value="4">Audi</option>
+                    <option value="5">Ford</option>
+                    <option value="6">Renoult</option>
                 </select>
             </div>
         </div>
     </div>
 
 
-        <div class="form-group">
+
+ <div class="form-group">
         <div class="row">
             <div class="col-md-2">
-                <h3><label for="nro_doc" class="label label-primary">Numero</label></h3>
+                <h3><label for="modelo" class="label label-primary">Modelo</label></h3>
             </div>
             <div class="col-md-4">
-                <input type="number" class="form-control" id="nro_doc">
+                <input type="text" class="form-control" id="modelo">
             </div>
-            </div>
-        </div>
 
+    </div>
+    </div>
 
 
     <div class="form-group">
         <div class="row">
             <div class="col-md-2">
-                <h3><label for="genero" class="label label-primary">Genero</label></h3>
+                <h3><label for="color" class="label label-primary">Color</label></h3>
             </div>
             <div class="col-md-10">
                 <div class="radio-inline">
-                    <label><input type="radio" name="genero" value="H">Hombre</label>
+                    <label><input type="radio" name="color" value="B">Blanco</label>
                 </div>
                 <div class="radio-inline">
-                    <label><input type="radio" name="genero" value="M">Mujer</label>
+                    <label><input type="radio" name="color" value="N">Negro</label>
+                </div>
+                <div class="radio-inline">
+                    <label><input type="radio" name="color" value="G">Gris</label>
+                </div>
+                <div class="radio-inline">
+                    <label><input type="radio" name="color" value="R">Rojo</label>
+                </div>
+                <div class="radio-inline">
+                    <label><input type="radio" name="color" value="A">Azul</label>
+                </div>
+                <div class="radio-inline">
+                    <label><input type="radio" name="color" value="V">Verde</label>
                 </div>
             </div>
         </div>
