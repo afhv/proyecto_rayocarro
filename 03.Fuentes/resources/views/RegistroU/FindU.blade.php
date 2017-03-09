@@ -1,11 +1,14 @@
+@extends('layouts.app')
+
+
 @section('content_title')
-Consulta Registros Usuarios
+Consulta Registros Conductores
 @stop
 
 @section('breadcrumb')
 <li><a href="\">Inicio</a></li>
-<li><a href="\RegistroU\index">Registro Usuarios</a></li>
-<li class="active">Listar Usuarios</li>
+<li><a href="\RegistroU\index">Registro Conductor</a></li>
+<li class="active">Listar Conductores</li>
 @stop
 
 
