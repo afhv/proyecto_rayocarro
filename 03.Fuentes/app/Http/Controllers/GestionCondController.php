@@ -12,20 +12,20 @@ class GestionCondController extends Controller
      }
 
       public function registroC() {
-        return view('GestionarConductor.FormRegistro');
+        return view('RegistroC.RegistroC');
 
       }
 
     public function deleteC() {
-        return view('GestionarConductor.FormDelete');
+        return view('RegistroC.DeleteC');
 
     }
 
      public function find() {
-        return view('GestionarConductor.FormSearch');
+        return view('RegistroC.FindC');
     }
 
         public function search() {
-        return view('GestionarConductor.FormFind');
+        return view('RegistroC.SearchC');
     }
 }

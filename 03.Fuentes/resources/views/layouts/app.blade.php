@@ -60,10 +60,10 @@
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conductores<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Nuevo</a></li>
-                                                    <li><a href="#">Consultar</a></li>
-                                                    <li><a href="#">Modificar</a></li>
-                                                    <li><a href="#">Eliminar</a></li>
+                                                    <li><a href="\RegistroC\save">Nuevo</a></li>
+                                                    <li><a href="\RegistroC\find">Consultar</a></li>
+                                                    <li><a href="\RegistroC\search">Modificar</a></li>
+                                                    <li><a href="\RegistroC\delete">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown">

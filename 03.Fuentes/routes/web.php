@@ -34,5 +34,5 @@ Route::get('RayoCarro/index', 'SitioController@index');
 Route::get('RegistroC/save', 'GestionCondController@registroC');
 Route::get('RegistroC/delete', 'GestionCondController@deleteC');
 Route::get('RegistroC/find', 'GestionCondController@find');
-Route::get('RegistroC/search', 'GestionCondController@find');
+Route::get('RegistroC/search', 'GestionCondController@search');
 Route::get('Ejemplo', 'SitioController@encuestaSatisfaccion');
