@@ -4,11 +4,8 @@
 
 -- Yaneth  --
 1) Configurar entorno 
-Instalar brackets, extensiónnhj del Git
-2)Clonar proyecto del Git
-3)Crear el controlador de conductores
-4)Crear las rutas de gestionar conductores 
-5)Crear las vistas de gestionar conductores
+2) Instalar brackets, extensión del Git
+
 
 -- Jhonathan --
 1)
