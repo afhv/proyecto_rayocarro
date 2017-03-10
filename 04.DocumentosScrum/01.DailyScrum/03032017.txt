@@ -1,18 +1,21 @@
-1) QuÈ se hizo ayer?
-2) Que se har· hoy?
+1) Qu√© se hizo ayer?
+2) Que se har√° hoy?
 3) Que problemas se han tenido?
 
 -- Yaneth  --
-1) 
-2)
-3)
+1) Configurar entorno 
+Instalar brackets, extensi√≥nnhj del Git
+2)Clonar proyecto del Git
+3)Crear el controlador de conductores
+4)Crear las rutas de gestionar conductores 
+5)Crear las vistas de gestionar conductores
 
 -- Jhonathan --
 1)
 2)
 3)
 
--- AndrÈs --
+-- Andr√©s --
 1)
 2)
 3)
