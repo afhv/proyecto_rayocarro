@@ -26,7 +26,7 @@ Nuevo Registro Entrada / Salida
     <strong>El vehículo con placas XXX000 no existe en el sistema</strong>
 </div>
 
-<form action="/RegistroES/save" method="post">
+{{ Form::open(array('action' => '/RegistroES/save', 'method' => 'post')) }}
     <div class="form-group">
         <div class="row">
             <div class="col-md-2">
@@ -103,5 +103,5 @@ Nuevo Registro Entrada / Salida
             <div class="col-md-4"></div>
         </div>
     </div>
-</form>
+{{ Form::close() }}
 @stop

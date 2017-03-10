@@ -71,7 +71,7 @@
                                                 <ul class="dropdown-menu">
                                                     <li><a href="\RegistroES\new">Nuevo</a></li>
                                                     <li><a href="\RegistroES\search">Consultar</a></li>
-                                                    <li><a href="\RegistroES\del">Eliminar</a></li>
+                                                    <li><a href="\RegistroES\delete">Eliminar</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
