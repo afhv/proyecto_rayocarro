@@ -1,18 +1,18 @@
-1) QuÈ se hizo ayer?
-2) Que se har· hoy?
+1) Qu√© se hizo ayer?
+2) Que se har√° hoy?
 3) Que problemas se han tenido?
 
 -- Yaneth  --
-1) 
-2)
-3)
+1) Configurar entorno 
+2) Instalar brackets, extensi√≥n del Git
+
 
 -- Jhonathan --
 1)
 2)
 3)
 
--- AndrÈs --
+-- Andr√©s --
 1)
 2)
 3)
