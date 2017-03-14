@@ -18,7 +18,7 @@ Consulta Registros Entrada / Salida
     <strong>No existen registros para el vehículo con placas XXX000</strong>
 </div>
 
-<form action="/RegistroES/find" method="get">
+{{ Form::open(array('action' => '/RegistroES/find', 'method' => 'get')) }}
     <div class="form-group">
         <div class="row">
             <div class="col-md-2">
@@ -32,5 +32,5 @@ Consulta Registros Entrada / Salida
             </div>
         </div>
     </div>
-</form>
+{{ Form::close() }}
 @stop

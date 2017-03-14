@@ -31,6 +31,10 @@ Route::get('RegistroES/find', 'RegistroESController@find');
 Route::get('RegistroES/delete', 'RegistroESController@delete');
 
 Route::get('RayoCarro/index', 'SitioController@index');
+
+Route::get('RayoCarro/RegistroConductor', 'SitioController@registroC');
+Route::get('RayoCarro/DeleteConductor', 'SitioController@deleteC');
+
 Route::get('RegistroC/save', 'GestionCondController@registroC');
 Route::get('RegistroC/delete', 'GestionCondController@deleteC');
 Route::get('RegistroC/find', 'GestionCondController@findC');

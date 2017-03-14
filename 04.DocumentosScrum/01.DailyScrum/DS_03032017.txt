@@ -9,7 +9,7 @@
 
 -- Jhonathan --
 1) Se descargó el código de la aplicación desde GitHub para ponerlo a funcionar localmente
-2) Se construirán los mockups de 
+2) Se construirán los mockups de vehiculos
 3) No ha sido posible que funcione localmente, ya se tiene el archivo .env, pero aun no funciona
 
 -- Andrés --

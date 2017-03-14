@@ -21,4 +21,8 @@ class RegistroESController extends Controller
     public function find() {
         return view('RegistroES/Find');
     }
+
+    public function delete() {
+        return view('RegistroES/Del');
+    }
 }

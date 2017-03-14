@@ -1,0 +1,19 @@
+1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1) Se modifica el MER y se crea el SitioController
+2) Se realizará modificación del MER según los cambios encontrados con los mockups de conductor y se creará el SitioController
+3) A pesar que el proyecto ya se descargó correctamente el "artisan serve" presenta errores al arrancar
+
+-- Jhonathan --
+1) -- No se tiene información --
+2) -- No se tiene información --
+3) -- No se tiene información --
+
+-- Andrés --
+1) Se construyó el controlador, la vista, la ruta y las opciones del menu para Crear registro E/S
+2) Se construirá el controlador, la vista, la ruta y las opciones del menu para Consultar registro E/S
+3) Ninguno
+ 
