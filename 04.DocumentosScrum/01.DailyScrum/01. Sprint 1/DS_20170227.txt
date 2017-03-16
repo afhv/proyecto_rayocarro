@@ -1,0 +1,27 @@
+﻿1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1) 	Se recibió el enunciado del proyecto
+	Se realizó un modelado general, rápido de la estructura de tablas y formularios para la solución
+2) No puede trabajar
+3) Ninguno
+
+-- Jhonathan --
+1) 	Se recibió el enunciado del proyecto
+	Se realizó un modelado general, rápido de la estructura de tablas y formularios para la solución
+2) No puede trabajar
+3) Ninguno
+
+-- Andrés --
+1) 	
+	Se recibió el enunciado del proyecto
+	Se realizó un modelado general, rápido de la estructura de tablas y formularios para la solución
+2)
+	Se construirá la estructura de directorios del proyecto
+	Se creará el tablero en Trello
+	Se creará el proyecto en Laravel
+	Se creará el proyecto en Github
+3) Ninguno
+ 
