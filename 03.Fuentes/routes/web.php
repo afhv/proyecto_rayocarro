@@ -51,3 +51,7 @@ Route::get('RegistroU/save', 'GestionUserController@registroU');
 Route::get('RegistroU/delete', 'GestionUserController@deleteU');
 Route::get('RegistroU/find', 'GestionUserController@findU');
 Route::get('RegistroU/search', 'GestionUserController@searchU');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
