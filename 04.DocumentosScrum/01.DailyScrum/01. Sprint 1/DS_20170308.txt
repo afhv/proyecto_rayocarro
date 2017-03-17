@@ -4,8 +4,8 @@
 
 -- Yaneth  --
 1) Se modifica el MER y se crea el SitioController
-2) Se realizará modificación del MER según los cambios encontrados con los mockups de conductor y se creará el SitioController
-3) A pesar que el proyecto ya se descargó correctamente el "artisan serve" presenta errores al arrancar
+2) Se construirán los mockups de crear, modificar, consultar y eliminar vehiculo
+3) Ninguno
 
 -- Jhonathan --
 1) -- No se tiene información --
@@ -14,6 +14,6 @@
 
 -- Andrés --
 1) Se construyó el controlador, la vista, la ruta y las opciones del menu para Crear registro E/S
-2) Se construirá el controlador, la vista, la ruta y las opciones del menu para Consultar registro E/S
+2) Se configurará el menu con todas las opciones y se programará la ruta, controlador y vista para consultar y eliminar registro E/S
 3) Ninguno
  

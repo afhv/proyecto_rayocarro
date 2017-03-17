@@ -1,0 +1,31 @@
+1) Qué cosas han funcionado bien.
+-- Yaneth --
+
+-- Andres --
+	El modelo de trabajo con Mockups
+	La utilización de Scrum, DailyScrum
+	Nos adaptamos adecuadamente al retiro de un miembro del equipo
+	Utilización de boostrap para el diseño
+	Asignación de tareas utilizando el tablero (Trello)	
+
+2) Cuales hay que mejorar.
+-- Yaneth --
+
+-- Andres --
+	Configuración inicial de los entornos de trabajo
+
+3) Qué cosas quiere probar/hacer en la siguiente iteración.
+-- Yaneth --
+
+-- Andres --
+	Realizar pruebas automatizadas
+	Incluir multi - idioma
+
+4) Qué ha aprendido.
+-- Yaneth --
+
+-- Andres --
+	Estructura y programación con Laravel
+	Utilización de Git
+	
+
