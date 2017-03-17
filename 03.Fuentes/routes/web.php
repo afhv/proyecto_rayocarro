@@ -49,13 +49,13 @@ Route::get('RegistroV/search', 'GestionVehController@searchV');
 
 Route::get('RegistroU/save', 'GestionUserController@registroU');
 Route::get('RegistroU/delete', 'GestionUserController@deleteU');
-Route::get('RegistroU/find', 'GestionUserController@findU');
+Route::get('RegistroU/find', 'GestionUserController@index');
 Route::get('RegistroU/search', 'GestionUserController@searchU');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::resource('users', 'UserController');
+Route::resource('users', 'GestionUserController');
 
 
 

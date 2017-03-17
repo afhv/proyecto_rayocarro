@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -94,3 +95,4 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
+
