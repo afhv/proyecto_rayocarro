@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function() {
-   return view('Prueba');
+    return view('Prueba');
 });
 
 
@@ -55,3 +55,10 @@ Route::get('RegistroU/search', 'GestionUserController@searchU');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::resource('users', 'UserController');
+
+
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('users', 'GestionUserController');
+});

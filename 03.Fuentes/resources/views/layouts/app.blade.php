@@ -19,6 +19,9 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
+
+
 </head>
 <body>
     <div id="app">
@@ -78,6 +81,12 @@
             </div>
         </nav>
 
+
+         @if(Session::has('flash_message'))
+            <article class="alert alert-success">
+                {{ Session::get('flash_message') }}
+            </article>
+            @endif
         @yield('content')
     </div>
 
