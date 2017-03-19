@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'lastName', 'email', 'password',
     ];
 
 
@@ -33,7 +33,7 @@ class User extends Authenticatable
      * @var array
      */
 
-    public function perfiles()
+    /*public function perfiles()
     {
         return $this->hasOne('App\Profile');
     }
@@ -49,7 +49,7 @@ class User extends Authenticatable
     public function vehiculos()
     {
         return $this->hasMany('App\Vehiculo');
-    }
+    }*/
 
 
     public function setPasswordAttribute($plainPassword){
