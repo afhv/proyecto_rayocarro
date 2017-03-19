@@ -3,34 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use App\User;
+use Illuminate\Support\Facades\Log;
 
-class GestionUserController extends Controller
+class UserController extends Controller
 {
-    //
-    public function registroU() {
-        return view('RegistroU.RegistroU');
-
-    }
-
-    public function deleteU() {
-        return view('RegistroU.DeleteU');
-
-    }
-
-    public function findU() {
-        return view('RegistroU.FindU');
-    }
-
-    public function searchU() {
-        return view('RegistroU.SearchU');
-    }
-
     //Para listar:
 
     public function index(Request $request)
     {
         $users = User::all();
-        return view('users.index', ['list' => $users]);
+        return view('RegistroU.index', ['list' => $users]);
     }
 
 
@@ -57,7 +41,9 @@ class GestionUserController extends Controller
     //Para agregar:
     public function create(Request $request)
     {
-        return view('users.create');
+         $perfiles = Perfils::pluck(['id', 'nombre']);
+
+        return view('RegistroU.create');
     }
 
 
@@ -68,13 +54,15 @@ class GestionUserController extends Controller
         $input = $request->all();
 
         $this->validate($request, [
-            'name' => 'required | string | alpha_dash | max:66',
+            'name' => 'required | string | alpha_dash | max:50',
+            'lastName' => 'required | string | alpha_dash | max:50'
             'email' => 'required | email',
-            'password' => 'required | string | min:8 | max:64', ]);
+            'password' => 'required | string | min:6 | max:30',
+        ]);
 
         User::create($input);
-        Session::flash('flash_message', 'User successfully added!');
-        return redirect('/home');
+        Session::flash('flash_message_ok', 'User successfully added!');
+        return redirect(url('users/'));
     }
 
 

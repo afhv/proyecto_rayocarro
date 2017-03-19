@@ -11,13 +11,10 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', function () {
-    return view('index');
+    return view('auth/login');
 });
+
 
 Route::get('/test', function() {
     return view('Prueba');
@@ -47,18 +44,17 @@ Route::get('RegistroV/find', 'GestionVehController@findV');
 Route::get('RegistroV/search', 'GestionVehController@searchV');
 
 
-Route::get('RegistroU/save', 'GestionUserController@registroU');
+/*Route::get('RegistroU/save', 'GestionUserController@registroU');
 Route::get('RegistroU/delete', 'GestionUserController@deleteU');
 Route::get('RegistroU/find', 'GestionUserController@index');
-Route::get('RegistroU/search', 'GestionUserController@searchU');
+Route::get('RegistroU/search', 'GestionUserController@searchU');*/
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::resource('users', 'GestionUserController');
-
-
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::resource('users', 'GestionUserController');
+    Route::resource('users', 'UserController');
+
+    Route::get('users1/find', 'UserController@index');
 });
