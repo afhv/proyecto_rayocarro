@@ -13,21 +13,23 @@ class CreateVehiculosTable extends Migration
      */
     public function up()
     {
+
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->increments('id');
 
             $table->date('f_ingreso')->nullable();
-            $table->string('placaV', 5)->unique();
+            $table->string('placaV', 6)->unique();
             $table->string('marcaV', 20)->nullable();
             $table->string('modeloV', 20)->nullable();
             $table->string('colorV', 20)->nullable();
-            $table->integer('user_id')->unsigned();
 
-            $table->timestamps();
+            $table->integer('user_id')->unsigned();
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

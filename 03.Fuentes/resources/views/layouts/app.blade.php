@@ -120,22 +120,22 @@
                                     <table class="table">
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="\RegistroV\save">Nuevo</a>
+                                                <i class="fa fa-plus-circle"></i><a href="\vehiculos\create">Nuevo</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                               <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-search-plus"></i><a href="\vehiculos\show">Consultar</a>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <i class="fa fa-search-plus"></i><a href="\RegistroV\find">Consultar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-pencil"></i><a href="\RegistroV\search">Modificar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-eraser"></i><a href="\RegistroV\delete">Eliminar</a>
+                                                <i class="fa fa-pencil"></i><a href="\vehiculos\search">Modificar</a>
                                             </td>
                                         </tr>
                                     </table>
