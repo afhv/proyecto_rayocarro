@@ -35,9 +35,14 @@
                             <div id="collapse1" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
+                                       <tr>
+                                           <td>
+                                               <i class="fa fa-server"></i><a href="{{ url ('perfils') }}">Listar</a>
+                                           </td>
+                                       </tr>
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="#">Nuevo</a>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url('perfils/create') }}">Nuevo</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -55,6 +60,13 @@
                                                 <i class="fa fa-eraser"></i><a href="#">Eliminar</a>
                                             </td>
                                         </tr>
+                                    </table>
+                                    <table class="table">
+                                       <tr>
+                                           <td>
+                                               <i class="fa fa-server"></i><a href="{{ url ('options') }}">Opciones</a>
+                                           </td>
+                                       </tr>
                                     </table>
                                 </div>
                             </div>
@@ -237,12 +249,17 @@
                             <ol class="breadcrumb">
                                 @yield('breadcrumb')
                             </ol>
-                        </div>
+                        <div>
 
                         <div class="panel-body">
                             @if(Session::has('flash_message_ok'))
                             <article class="alert alert-success">
                                 {{ Session::get('flash_message_ok') }}
+                            </article>
+                            @endif
+                            @if(Session::has('flash_message_ko'))
+                            <article class="alert alert-danger">
+                                {{ Session::get('flash_message_ko') }}
                             </article>
                             @endif
 

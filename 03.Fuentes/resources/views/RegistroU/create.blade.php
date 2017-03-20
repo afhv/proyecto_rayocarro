@@ -35,67 +35,68 @@ Nuevo Registro Usuario
 <div class="form-group">
     <div class="row">
         <div class="col-md-3">
-            <h3>{!! Form::label('name', 'Nombre', ['class' => 'label label-default']) !!} </h3>
+            <h4>{!! Form::label('name', 'Nombre', ['class' => 'label label-default']) !!} </h4>
         </div>
         <div class="col-md-4">
-            <h3>{!! Form::text('name', null, ['class' => 'form-control']) !!} </h3>
-        </div>
-        <div class="col-md-2">
-            <h3>{!! Form::label('lastName', 'Apellido', ['class' => 'label label-default']) !!} </h3>
-        </div>
-        <div class="col-md-3">
-            <h3>{!! Form::text('lastName', null, ['class' => 'form-control']) !!} </h3>
+            <h4>{!! Form::text('name', null, ['class' => 'form-control']) !!} </h4>
         </div>
     </div>
 </div>
-<div class="form-group">
-    <div class="row">
-        <div class="col-md-3">
-            <h3>{!! Form::label('email', 'Correo electrónico', ['class' => 'label label-default']) !!} </h3>
-        </div>
-        <div class="col-md-4">
-            <h3>{!! Form::text('email', null, ['class' => 'form-control']) !!} </h3>
-        </div>
-
-    </div>
-</div>
-<div class="form-group">
-    <div class="row">
-        <div class="col-md-3">
-            <h3>{!! Form::label('password', 'Contraseña', ['class' => 'label label-default']) !!} </h3>
-        </div>
-        <div class="col-md-4">
-            <h3>{!! Form::password('password', null, ['class' => 'form-control']) !!} </h3>
-        </div>
-    </div>
-</div>
-<div class="form-group">
-    <div class="row">
-        <div class="col-md-3">
-            <h3>{!! Form::label('perfil', 'Perfil', ['class' => 'label label-default']) !!} </h3>
-        </div>
-        <div class="col-md-4">
-            <h3>{!! Form::select('perfil', $perfiles, null, ['class' => 'form-control']) !!} </h3>
-        </div>
-    </div>
-</div>
-
-
-<!--<div class="form-group">
+<!-- <div class="form-group">
 <div class="row">
 <div class="col-md-3">
-<h3><label for="tipo_cuenta" class="label label-default">Tipo</label></h3>
+<h3>{!! Form::label('lastName', 'Apellido', ['class' => 'label label-default']) !!} </h3>
 </div>
 <div class="col-md-4">
-<h3><select class="form-control" id="tipo_cuenta">
-<option value="1">Administrador</option>
-<option value="2">Operario</option>
-</select></h3>
+<h3>{!! Form::text('lastName', null, ['class' => 'form-control']) !!} </h3>
 </div>
 </div>
 </div> -->
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('email', 'Correo electrónico', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::text('email', null, ['class' => 'form-control']) !!} </h4>
+        </div>
 
-
+    </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('password', 'Contraseña', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::password('password', null, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('password_confirmation', 'Confirmación contraseña', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::password('password_confirmation', null, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('perfil', 'Perfil', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4><select class="form-control" name="perfil_id">
+                @foreach($perfiles as $perfil)
+                <option value="{{$perfil->id}}">{{$perfil->nombre}}</option>
+                @endforeach
+                </select></h4>
+        </div>
+    </div>
+</div>
 
 <div class="form-group">
     <div class="row">
@@ -104,7 +105,7 @@ Nuevo Registro Usuario
             {!! Form::submit('Registrar', ['class' => 'btn btn-default']) !!}
         </div>
         <div class="col-md-2">
-           {!! Form::reset('Cancelar', ['class' => 'btn btn-default']) !!}
+            {!! Form::reset('Cancelar', ['class' => 'btn btn-default']) !!}
         </div>
         <div class="col-md-4"></div>
     </div>
