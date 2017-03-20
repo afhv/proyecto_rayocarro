@@ -120,14 +120,14 @@ edited!");
     {
         try
         {
-            $user = User::findOrFail($id);
-            $user->delete();
-            Session::flash('flash_message', 'User successfully deleted!');
-            return redirect('/home');
+            $vehiculos = Vehiculo::findOrFail($id);
+            $vehiculos ->delete();
+            Session::flash('flash_message', 'Vehicle successfully deleted!');
+            return redirect('/vehiculos');
         }
         catch(ModelNotFoundException $e)
         {
-            Session::flash('flash_message', "The User ($id) could not be found to be
+            Session::flash('flash_message', "The Vehicle ($id) could not be found to be
 deleted!");
             return redirect()->back();
         }

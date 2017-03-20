@@ -138,11 +138,6 @@
                                                 <i class="fa fa-pencil"></i><a href="\vehiculos\search">Modificar</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-eraser"></i><a href="\vehiculos\delete">Eliminar</a>
-                                            </td>
-                                        </tr>
                                     </table>
                                 </div>
                             </div>
