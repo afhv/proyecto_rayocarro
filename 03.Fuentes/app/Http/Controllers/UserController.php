@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use App\User;
+use App\Perfil;
 use Illuminate\Support\Facades\Log;
+use View;
 
 class UserController extends Controller
 {
@@ -41,9 +43,8 @@ class UserController extends Controller
     //Para agregar:
     public function create(Request $request)
     {
-         $perfiles = Perfils::pluck(['id', 'nombre']);
-
-        return view('RegistroU.create');
+        $perfiles = Perfil::all(['id', 'nombre']);
+        return View::make('RegistroU.create', compact('perfiles',$perfiles));
     }
 
 
@@ -55,9 +56,9 @@ class UserController extends Controller
 
         $this->validate($request, [
             'name' => 'required | string | alpha_dash | max:50',
-            'lastName' => 'required | string | alpha_dash | max:50'
             'email' => 'required | email',
-            'password' => 'required | string | min:6 | max:30',
+            'password' => 'required | min:6',
+            'password_confirmation' => 'required| min:6 | same:password',
         ]);
 
         User::create($input);

@@ -55,6 +55,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::resource('users', 'UserController');
+    Route::resource('perfils', 'PerfilController');
 
     Route::get('users1/find', 'UserController@index');
 });
