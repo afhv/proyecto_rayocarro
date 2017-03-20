@@ -23,7 +23,7 @@ Actualizar información de Vehiculo
 ]) !!}
 <div class="form-group">
 
-       <div class="row">
+    <div class="row">
         <div class="col-md-3">
             <h4>{!! Form::label('f_ingreso', 'Fecha Ingreso', ['class' => 'label label-default']) !!} </h4>
         </div>
@@ -66,6 +66,17 @@ Actualizar información de Vehiculo
         </div>
         <div class="col-md-4">
             <h4>{!! Form::text('colorV', $data->colorV, ['class' => 'form-control']) !!} </h4>
+            <div class="col-md-2">
+                <h4>{!! Form::radio('colorV', 'Blanco', ['class' => 'form-control']) !!}</h4><br>
+                <h4>{!! Form::radio('colorV', 'Negro',['class' => 'form-control']) !!}</h4><br>
+                <h4>{!! Form::radio('colorV', 'Verde', ['class' => 'form-control']) !!}</h4><br>
+            </div>
+            <div class="col-md-3">
+                <h4>{!! Form::radio('colorV', 'Amarillo', ['class' => 'form-control']) !!}</h4><br>
+                <h4>{!! Form::radio('colorV', 'Rojo',['class' => 'form-control']) !!}</h4><br>
+                <h4>{!! Form::radio('colorV', 'Gris',['class' => 'form-control']) !!}</h4>
+            </div>
+
         </div>
     </div>
 </div>

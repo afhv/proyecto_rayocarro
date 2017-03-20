@@ -35,11 +35,11 @@
                             <div id="collapse1" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
-                                       <tr>
-                                           <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('perfils') }}">Listar</a>
-                                           </td>
-                                       </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('perfils') }}">Listar</a>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url('perfils/create') }}">Nuevo</a>
@@ -62,11 +62,11 @@
                                         </tr>
                                     </table>
                                     <table class="table">
-                                       <tr>
-                                           <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('options') }}">Opciones</a>
-                                           </td>
-                                       </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('options') }}">Opciones</a>
+                                            </td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>
@@ -80,11 +80,11 @@
                             <div id="collapse2" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
-                                       <tr>
-                                           <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('users') }}">Listar</a>
-                                           </td>
-                                       </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('users') }}">Listar</a>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url ('users\create') }}">Nuevo</a>
@@ -124,9 +124,9 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                          <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
-                                           </td>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -153,22 +153,17 @@
                                     <table class="table">
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="\RegistroC\save">Nuevo</a>
+                                                <i class="fa fa-plus-circle"></i><a href="\conductores\create">Nuevo</a>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <i class="fa fa-search-plus"></i><a href="\RegistroC\find">Consultar</a>
+                                                <i class="fa fa-search-plus"></i><a href="{{ url ('conductores') }}">Consultar</a>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <i class="fa fa-pencil"></i><a href="\RegistroC\search">Modificar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-eraser"></i><a href="\RegistroC\delete">Eliminar</a>
+                                                <i class="fa fa-pencil"></i><a href="\vehiculos\create">Modificar</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -245,32 +240,32 @@
                 <div class="col-md-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                          <h2> @yield('content_title') </h2>
+                            <h2> @yield('content_title') </h2>
                             <ol class="breadcrumb">
                                 @yield('breadcrumb')
                             </ol>
-                        <div>
+                            <div>
 
-                        <div class="panel-body">
-                            @if(Session::has('flash_message_ok'))
-                            <article class="alert alert-success">
-                                {{ Session::get('flash_message_ok') }}
-                            </article>
-                            @endif
-                            @if(Session::has('flash_message_ko'))
-                            <article class="alert alert-danger">
-                                {{ Session::get('flash_message_ko') }}
-                            </article>
-                            @endif
+                                <div class="panel-body">
+                                    @if(Session::has('flash_message_ok'))
+                                    <article class="alert alert-success">
+                                        {{ Session::get('flash_message_ok') }}
+                                    </article>
+                                    @endif
+                                    @if(Session::has('flash_message_ko'))
+                                    <article class="alert alert-danger">
+                                        {{ Session::get('flash_message_ko') }}
+                                    </article>
+                                    @endif
 
-                            @yield('content')
+                                    @yield('content')
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Scripts -->
-        {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
-        {!! Html::script('assets/js/bootstrap.min.js') !!}
-    </body>
-</html>
+                <!-- Scripts -->
+                {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
+                {!! Html::script('assets/js/bootstrap.min.js') !!}
+                </body>
+            </html>
