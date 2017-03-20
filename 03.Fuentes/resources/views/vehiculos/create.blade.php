@@ -22,8 +22,7 @@ Nuevo Registro Vehiculo
 
 
 {!! Form::open(['route' => 'vehiculos.store']) !!}
-
-
+{!! Form::hidden('user_id', 2) !!}
 <form action="/vehiculos/create" method="post">
 
 

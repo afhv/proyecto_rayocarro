@@ -1,41 +1,37 @@
 @extends('layouts.app')
-@section('content_title')
-Consulta Registros Vechiculo
-@stop
-
-@section('breadcrumb')
-<li><a href="\">Inicio</a></li>
-<li><a href="\vehiculos\index">Registro Vehiculo</a></li>
-<li class="active">Listar Vehiculos</li>
-@stop
-
-
 @section('content')
-
-<h1>{{ $data->name }}</h1>
+<h1>{{ $data->placaV }}</h1>
 <p class="lead">Vehiculo</p>
 <table class="table table-striped table-hover">
     <tr>
-        <td style="width: 200px;">Email</td>
-        <td>{{ $data->email }}</td>
+        <td style="width: 200px;">Marca</td>
+        <td>{{ $data->marcaV }}</td>
     </tr>
     <tr>
-        <td>Created At</td>
-        <td>{{ $data->created_at }}</td>
+        <td style="width: 200px;">Modelo</td>
+        <td>{{ $data->modeloV }}</td>
     </tr>
     <tr>
-        <td>Updated At</td>
-        <td>{{ $data->updated_at }}</td>
+        <td style="width: 200px;">Color</td>
+        <td>{{ $data->colorV }}</td>
     </tr>
+    <tr>
+        <td style="width: 200px;">Fecha Ingreso</td>
+        <td>{{ $data->f_ingreso }}</td>
+    </tr>
+
+
 </table>
 <hr>
 <a href="{{ route('vehiculos.edit', $data->id) }}" class="btn btn-primary">Edit
     User</a>
 {!! Form::open([
 'method' => 'DELETE',
-'route' => ['users.destroy', $data->id]
+'route' => ['vehiculos.destroy', $data->id]
 ]) !!}
-{!! Form::submit('Delete this user?', ['class' => 'btn btn-danger']) !!}
+{!! Form::submit('Delete this vehicle?', ['class' => 'btn btn-danger']) !!}
 {!! Form::close() !!}
-<a href="{{ route('vehiculos.index') }}" class="btn btn-info">Back to all users</a>
+<a href="{{ url('\vehiculos\index')}}" class="btn btn-info">Back to all vehicles</a>
 @stop
+
+

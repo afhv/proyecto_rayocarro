@@ -22,13 +22,14 @@ class CreateVehiculosTable extends Migration
             $table->string('marcaV', 20)->nullable();
             $table->string('modeloV', 20)->nullable();
             $table->string('colorV', 20)->nullable();
+
             $table->integer('user_id')->unsigned();
-            $table->rememberToken();
-            $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

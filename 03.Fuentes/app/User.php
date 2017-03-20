@@ -38,6 +38,10 @@ class User extends Authenticatable
         return $this->hasOne('App\Perfil');
     }
 
+    public function vehiculos()
+    {
+        return $this->hasMany('App\Vehiculo');
+    }
 
     /*public function conductores()
     {
@@ -46,10 +50,7 @@ class User extends Authenticatable
 
 
 
-    public function vehiculos()
-    {
-        return $this->hasMany('App\Vehiculo');
-    }*/
+    */
 
 
     public function setPasswordAttribute($plainPassword){

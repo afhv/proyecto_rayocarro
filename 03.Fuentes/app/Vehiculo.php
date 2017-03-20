@@ -4,6 +4,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
+use App\User;
 
 
 class Vehiculo extends Model
@@ -11,15 +12,12 @@ class Vehiculo extends Model
     use Notifiable;
 
     protected $fillable = [
-         'f_ingreso', 'placaV', 'marcaV', 'modeloV','colorV'
+        'f_ingreso', 'placaV', 'marcaV', 'modeloV','colorV', 'user_id'
     ];
 
 
-
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-
-
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

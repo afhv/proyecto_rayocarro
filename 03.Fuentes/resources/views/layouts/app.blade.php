@@ -124,6 +124,11 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                          <td>
+                                               <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
+                                           </td>
+                                        </tr>
+                                        <tr>
                                             <td>
                                                 <i class="fa fa-search-plus"></i><a href="\vehiculos\show">Consultar</a>
                                             </td>

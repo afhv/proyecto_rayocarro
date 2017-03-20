@@ -1,19 +1,15 @@
 @extends('layouts.app')
 @section('content_title')
-Consulta Registros Vehiculo
+Actualizar información de Vehiculo
 @stop
 
 @section('breadcrumb')
 <li><a href="\">Inicio</a></li>
-<li><a href="\vehiculos\index">Consultar Vehiculo</a></li>
+<li><a href="\vehiculos\index">Editar Vehiculo</a></li>
 <li class="active">Modificar</li>
 @stop
 
 @section('content')
-<h1>Edit Vehicle</h1>
-<p class="lead">Edit this vehicle below.
-    <a href="{{ route('vehiculos.index') }}">Go back to all vehicles.</a></p>
-<hr>
 @if($errors->any())
 <div class="alert alert-danger">
     @foreach($errors->all() as $error)
@@ -26,17 +22,53 @@ Consulta Registros Vehiculo
 'route' => ['vehiculos.update', $data->id]
 ]) !!}
 <div class="form-group">
-    {!! Form::label('name', 'Name', ['class' => 'control-label']) !!}
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+
+       <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('f_ingreso', 'Fecha Ingreso', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::date('f_ingreso', $data->f_ingreso, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('placaV', 'Placa', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::text('placaV', $data->placaV, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('marcaV', 'Marca', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::text('marcaV', $data->marcaV, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('modeloV', 'Modelo', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::text('modeloV', $data->modeloV, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <h4>{!! Form::label('colorV', 'Color', ['class' => 'label label-default']) !!} </h4>
+        </div>
+        <div class="col-md-4">
+            <h4>{!! Form::text('colorV', $data->colorV, ['class' => 'form-control']) !!} </h4>
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    {!! Form::label('email', 'Email', ['class' => 'control-label']) !!}
-    {!! Form::text('email', null, ['class' => 'form-control']) !!}
-</div>
-<div class="form-group">
-    {!! Form::label('password', 'Password', ['class' => 'control-label']) !!}
-    {!! Form::password('password', ['class' => 'form-control']) !!}
-</div>
-{!! Form::submit('Update Vehicle', ['class' => 'btn btn-primary']) !!}
+{!! Form::submit('Actualizar', ['class' => 'btn btn-primary']) !!}
 {!! Form::close() !!}
 @stop

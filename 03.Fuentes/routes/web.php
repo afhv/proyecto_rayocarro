@@ -55,10 +55,10 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 Route::group(['middleware' => 'auth'], function() {
+    Route::resource('users', 'UserController');
     Route::resource('vehiculos', 'GestionVehController');
+    Route::get('users1/find', 'UserController@index');
+    Route::get('vehiculos', 'GestionVehController@index');
 
-    Route::get('vehiculos/show', 'GestionVehController@show');
     Route::get('vehiculos/create', 'GestionVehController@create');
-    Route::get('vehiculos/delete', 'GestionVehController@deleteV');
-    Route::get('vehiculos/search', 'GestionVehController@searchV');
 });
