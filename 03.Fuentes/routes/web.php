@@ -38,16 +38,9 @@ Route::get('RegistroC/find', 'GestionCondController@findC');
 Route::get('RegistroC/search', 'GestionCondController@searchC');
 
 
-Route::get('RegistroV/save', 'GestionVehController@registroV');
-Route::get('RegistroV/delete', 'GestionVehController@deleteV');
-Route::get('RegistroV/find', 'GestionVehController@findV');
-Route::get('RegistroV/search', 'GestionVehController@searchV');
 
 
-/*Route::get('RegistroU/save', 'GestionUserController@registroU');
-Route::get('RegistroU/delete', 'GestionUserController@deleteU');
-Route::get('RegistroU/find', 'GestionUserController@index');
-Route::get('RegistroU/search', 'GestionUserController@searchU');*/
+
 
 Auth::routes();
 
@@ -57,4 +50,14 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('users', 'UserController');
 
     Route::get('users1/find', 'UserController@index');
+});
+
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('vehiculos', 'GestionVehController');
+
+    Route::get('vehiculos/show', 'GestionVehController@show');
+    Route::get('vehiculos/create', 'GestionVehController@create');
+    Route::get('vehiculos/delete', 'GestionVehController@deleteV');
+    Route::get('vehiculos/search', 'GestionVehController@searchV');
 });
