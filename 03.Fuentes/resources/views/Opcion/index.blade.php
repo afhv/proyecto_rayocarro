@@ -1,46 +1,53 @@
 @extends('layouts.app')
 
 @section('content_title')
-Listado Perfiles
+Listado Opciones Menu
 @stop
 
 @section('breadcrumb')
 <li><a href="\">Inicio</a></li>
-<li class="active">Perfiles</li>
+<li class="active">Opción Menu</li>
 @stop
 
 
 @section('content')
+<a href="{{ route('opcions.create') }}" class="btn btn-info">Nuevo</a>
+<br>
+<br>
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
-            <th>Perfil</th>
-            <th>Opciones</th>
+            <th>Menu</th>
+            <th>Sub  - Menu</th>
+            <th>URL</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach($perfiles as $perfil)
+        @foreach($opciones as $opcion)
         <tr>
-            <td class="col-md-8">
-                {{ $perfil->nombre }}
+           <td class="col-md-2">
+                {{ $opcion->menu }}
             </td>
-            <td>
-                <a href="{{ route('perfils.show', $perfil->id) }}" class="btn btn-primary">Opciones</a>
+            <td class="col-md-2">
+                {{ $opcion->submenu }}
+            </td>
+            <td class="col-md-4">
+                {{ $opcion->url }}
             </td>
             <td class="col-md-4">
                 <table>
                     <tr>
                         <td>
-                            <a href="{{ route('perfils.show', $perfil->id) }}" class="btn btn-primary">Ver</a>
+                            <a href="{{ route('opcions.show', $opcion->id) }}" class="btn btn-primary">Ver</a>
                         </td>
                         <td>
-                            <a href="{{ route('perfils.edit', $perfil->id) }}" class="btn btn-primary">Editar</a>
+                            <a href="{{ route('opcions.edit', $opcion->id) }}" class="btn btn-primary">Editar</a>
                         </td>
                         <td>
                             {!! Form::open([
                             'method' => 'DELETE',
-                            'route' => ['perfils.destroy', $perfil->id]
+                            'route' => ['opcions.destroy', $opcion->id]
                             ]) !!}
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                             {!! Form::close() !!}
@@ -52,5 +59,4 @@ Listado Perfiles
         @endforeach
     </tbody>
 </table>
-
 @stop

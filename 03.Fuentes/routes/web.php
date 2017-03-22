@@ -51,6 +51,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('perfils', 'PerfilController');
     Route::resource('vehiculos', 'GestionVehController');
     Route::resource('personas', 'PersonaController');
+    Route::resource('opcions', 'OpcionController');
 
     Route::get('users1/find', 'UserController@index');
     Route::get('vehiculos', 'GestionVehController@index');
