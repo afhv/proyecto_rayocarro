@@ -35,11 +35,11 @@
                             <div id="collapse1" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
-                                       <tr>
-                                           <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('perfils') }}">Listar</a>
-                                           </td>
-                                       </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('perfils') }}">Listar</a>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url('perfils/create') }}">Nuevo</a>
@@ -62,11 +62,11 @@
                                         </tr>
                                     </table>
                                     <table class="table">
-                                       <tr>
-                                           <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('options') }}">Opciones</a>
-                                           </td>
-                                       </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('options') }}">Opciones</a>
+                                            </td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>
@@ -80,11 +80,11 @@
                             <div id="collapse2" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
-                                       <tr>
-                                           <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('users') }}">Listar</a>
-                                           </td>
-                                       </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('users') }}">Listar</a>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url ('users\create') }}">Nuevo</a>
@@ -106,16 +106,55 @@
                                             </td>
                                         </tr>
                                     </table>
+
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-car"></i>Vehiculos</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-user-circle"></i>Conductores</a>
                                 </h4>
                             </div>
                             <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel2 panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('personas') }}">Listar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url ('personas\create') }}">Nuevo</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-search-plus"></i><a href="#">Consultar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-pencil"></i><a href="#">Modificar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-eraser"></i><a href="#">Eliminar</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-car"></i>Vehiculos</a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -124,9 +163,9 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                          <td>
-                                               <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
-                                           </td>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -145,10 +184,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-user-o"></i>Conductores</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-user-o"></i>Conductores</a>
                                 </h4>
                             </div>
-                            <div id="collapse4" class="panel-collapse collapse">
+                            <div id="collapse5" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -178,10 +217,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-clock-o"></i>Registro E/S</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><i class="fa fa-clock-o"></i>Registro E/S</a>
                                 </h4>
                             </div>
-                            <div id="collapse5" class="panel-collapse collapse">
+                            <div id="collapse6" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -211,10 +250,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><i class="fa fa-key"></i>Salir</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7"><i class="fa fa-key"></i>Salir</a>
                                 </h4>
                             </div>
-                            <div id="collapse6" class="panel-collapse collapse">
+                            <div id="collapse7" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -245,32 +284,32 @@
                 <div class="col-md-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                          <h2> @yield('content_title') </h2>
+                            <h2> @yield('content_title') </h2>
                             <ol class="breadcrumb">
                                 @yield('breadcrumb')
                             </ol>
-                        <div>
+                            <div>
 
-                        <div class="panel-body">
-                            @if(Session::has('flash_message_ok'))
-                            <article class="alert alert-success">
-                                {{ Session::get('flash_message_ok') }}
-                            </article>
-                            @endif
-                            @if(Session::has('flash_message_ko'))
-                            <article class="alert alert-danger">
-                                {{ Session::get('flash_message_ko') }}
-                            </article>
-                            @endif
+                                <div class="panel-body">
+                                    @if(Session::has('flash_message_ok'))
+                                    <article class="alert alert-success">
+                                        {{ Session::get('flash_message_ok') }}
+                                    </article>
+                                    @endif
+                                    @if(Session::has('flash_message_ko'))
+                                    <article class="alert alert-danger">
+                                        {{ Session::get('flash_message_ko') }}
+                                    </article>
+                                    @endif
 
-                            @yield('content')
+                                    @yield('content')
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Scripts -->
-        {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
-        {!! Html::script('assets/js/bootstrap.min.js') !!}
-    </body>
-</html>
+                <!-- Scripts -->
+                {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
+                {!! Html::script('assets/js/bootstrap.min.js') !!}
+                </body>
+            </html>
