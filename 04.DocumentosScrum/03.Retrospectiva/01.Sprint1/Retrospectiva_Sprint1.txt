@@ -1,31 +1,38 @@
-1) Qu� cosas han funcionado bien.
+1) Qué cosas han funcionado bien.
 -- Yaneth --
-
+	El modelo de trabajo con Mockups
+	Implementación y realización de las tareas propuestas en el TO-DO del tablero trello
+	Adaptación y nueva asignación de tareas por ausencia de un miembro del equipo
+	Utilización de boostrap para el diseño
+	Codificación de pagina estática
 -- Andres --
 	El modelo de trabajo con Mockups
-	La utilizaci�n de Scrum, DailyScrum
+	La utilización de Scrum, DailyScrum
 	Nos adaptamos adecuadamente al retiro de un miembro del equipo
-	Utilizaci�n de boostrap para el dise�o
-	Asignaci�n de tareas utilizando el tablero (Trello)	
+	Utilización de boostrap para el diseño
+	Asignación de tareas utilizando el tablero (Trello)	
 
 2) Cuales hay que mejorar.
 -- Yaneth --
-
+	Configuración inicial de los entornos de trabajo (Brackets y extension Git)
 -- Andres --
-	Configuraci�n inicial de los entornos de trabajo
+	Configuración inicial de los entornos de trabajo
 
-3) Qu� cosas quiere probar/hacer en la siguiente iteraci�n.
+3) Qué cosas quiere probar/hacer en la siguiente iteración.
 -- Yaneth --
-
+	Todos los crud de los gestionar funcionales.
+	Las referencias de integridad bien formadas coherentes al MER planteado desde el inicio del proyecto
 -- Andres --
 	Realizar pruebas automatizadas
 	Incluir multi - idioma
 
-4) Qu� ha aprendido.
+4) Qué ha aprendido.
 -- Yaneth --
-
+	Estructura y programación con Laravel
+	Utilización de Git
+	Tablero Trello
 -- Andres --
-	Estructura y programaci�n con Laravel
-	Utilizaci�n de Git
+	Estructura y programación con Laravel
+	Utilización de Git
 	
 
