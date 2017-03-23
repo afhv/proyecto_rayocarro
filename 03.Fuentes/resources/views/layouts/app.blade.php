@@ -115,7 +115,6 @@
                         </div>
                         @endif
                         @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Conductores'))
-
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -131,13 +130,14 @@
                                                 <i class="fa fa-server"></i><a href="{{ url ('personas') }}">Listar</a>
                                             </td>
                                         </tr>
-
+                                        @endif
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Conductores','Crear'))
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url ('personas\create') }}">Nuevo</a>
                                             </td>
                                         </tr>
-
+                                        @endif
                                     </table>
                                 </div>
                             </div>
@@ -264,8 +264,8 @@
                 </div>
             </div>
         </div>
-                <!-- Scripts -->
-                {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
-                {!! Html::script('assets/js/bootstrap.min.js') !!}
-                </body>
-            </html>
+        <!-- Scripts -->
+        {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
+        {!! Html::script('assets/js/bootstrap.min.js') !!}
+    </body>
+</html>
