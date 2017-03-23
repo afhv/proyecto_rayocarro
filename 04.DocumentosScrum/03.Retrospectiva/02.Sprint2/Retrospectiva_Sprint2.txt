@@ -1,0 +1,20 @@
+1) Qué cosas han funcionado bien.
+-- Yaneth --
+	Trabajo en scrum
+	Asignación de tareas para esta segunda fase
+  Creacion y aplicacion de las migraciones
+	Codificación de las vistas asignadas
+-- Andres --
+
+2) Cuales hay que mejorar.
+-- Yaneth --
+	Cumplimiento en tiempos de entregables.
+  Percances con el archivo database.sqlite
+-- Andres --
+
+3) Qué ha aprendido.
+-- Yaneth --
+	Estructura y programación con Laravel
+	Creación de migraciones 
+	Creación de crud y formularios blade en laravel
+-- Andres --
