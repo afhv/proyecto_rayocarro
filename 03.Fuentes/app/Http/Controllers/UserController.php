@@ -11,25 +11,18 @@ use View;
 
 class UserController extends Controller
 {
-    //Para listar:
-
     public function index(Request $request)
     {
         $users = User::all();
         return view('RegistroU.index', ['list' => $users]);
     }
 
-
-
-
-    //Para mostrar info detallada:
-
     public function show(Request $request, $id)
     {
         try
         {
             $user = User::findOrFail($id);
-            return view('users.show', ['data' => $user]);
+            return view('RegistroU.show', ['data' => $user]);
         }
         catch(ModelNotFoundException $e)
         {
@@ -38,9 +31,6 @@ class UserController extends Controller
         }
     }
 
-
-
-    //Para agregar:
     public function create(Request $request)
     {
         $perfiles = Perfil::all(['id', 'nombre']);
@@ -75,7 +65,8 @@ class UserController extends Controller
         try
         {
             $user = User::findOrFail($id);
-            return view('users.edit', ['data' => $user]);
+            $perfiles = Perfil::all(['id', 'nombre']);
+            return view('RegistroU.edit', ['data' => $user, 'perfiles' => $perfiles]);
         }
         catch(ModelNotFoundException $e)
         {
@@ -94,39 +85,36 @@ edited!");
         {
             $user = User::findOrFail($id);
             $this->validate($request, [
-                'name' => 'required | string | alpha_dash | max:66',
+                'name' => 'required | string | alpha_dash | max:50',
                 'email' => 'required | email',
-                'password' => 'required | string | min:8 | max:64',
+                'password' => 'required | min:6',
+                'password_confirmation' => 'required| min:6 | same:password',
             ]);
             $input = $request->all();
             $user->fill($input)->save();
-            Session::flash('flash_message', 'User successfully edited!');
-            return redirect('/home');
+            Session::flash('flash_message_ok', 'User successfully edited!');
+            return redirect('users/');
         }
         catch(ModelNotFoundException $e)
         {
-            Session::flash('flash_message', "The User ($id) could not be found to be
+            Session::flash('flash_message_ko', "The User ($id) could not be found to be
 edited!");
             return redirect()->back();
         }
     }
 
-
-
-
-    //para eliminar
     public function destroy(Request $request, $id)
     {
         try
         {
             $user = User::findOrFail($id);
             $user->delete();
-            Session::flash('flash_message', 'User successfully deleted!');
-            return redirect('/home');
+            Session::flash('flash_message_ok', 'User successfully deleted!');
+            return redirect('users/');
         }
         catch(ModelNotFoundException $e)
         {
-            Session::flash('flash_message', "The User ($id) could not be found to be
+            Session::flash('flash_message_ko', "The User ($id) could not be found to be
 deleted!");
             return redirect()->back();
         }

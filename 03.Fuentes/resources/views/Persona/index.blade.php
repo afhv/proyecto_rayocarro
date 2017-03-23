@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content_title')
-Listado Perfiles
+Listado Personas
 @stop
 
 @section('breadcrumb')
 <li><a href="\">Inicio</a></li>
-<li class="active">Perfiles</li>
+<li class="active">Personas</li>
 @stop
 
 
@@ -14,33 +14,37 @@ Listado Perfiles
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
-            <th>Perfil</th>
-            <th>Opciones</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach($perfiles as $perfil)
+        @foreach($personas as $persona)
         <tr>
-            <td class="col-md-8">
-                {{ $perfil->nombre }}
+            <td class="col-md-3">
+                {{ $persona->documento }}
             </td>
-            <td>
-                <a href="{{ route('perfils.show', $perfil->id) }}" class="btn btn-primary">Opciones</a>
+            <td class="col-md-3">
+                {{ $persona->nombre }}
             </td>
-            <td class="col-md-4">
+            <td class="col-md-3">
+                {{ $persona->apellido }}
+            </td>S
+            <td class="col-md-3">
                 <table>
                     <tr>
                         <td>
-                            <a href="{{ route('perfils.show', $perfil->id) }}" class="btn btn-primary">Ver</a>
+                            <a href="{{ route('personas.show', $persona->id) }}" class="btn btn-primary">Ver</a>
                         </td>
                         <td>
-                            <a href="{{ route('perfils.edit', $perfil->id) }}" class="btn btn-primary">Editar</a>
+                            <a href="{{ route('personas.edit', $persona->id) }}" class="btn btn-primary">Editar</a>
                         </td>
                         <td>
                             {!! Form::open([
                             'method' => 'DELETE',
-                            'route' => ['perfils.destroy', $perfil->id]
+                            'route' => ['personas.destroy', $persona->id]
                             ]) !!}
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                             {!! Form::close() !!}

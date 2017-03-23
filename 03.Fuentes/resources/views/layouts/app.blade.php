@@ -106,16 +106,55 @@
                                             </td>
                                         </tr>
                                     </table>
+
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-car"></i>Vehiculos</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-user-circle"></i>Conductores</a>
                                 </h4>
                             </div>
                             <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel2 panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('personas') }}">Listar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url ('personas\create') }}">Nuevo</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-search-plus"></i><a href="#">Consultar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-pencil"></i><a href="#">Modificar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-eraser"></i><a href="#">Eliminar</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-car"></i>Vehiculos</a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -145,10 +184,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-user-o"></i>Conductores</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-user-o"></i>Conductores</a>
                                 </h4>
                             </div>
-                            <div id="collapse4" class="panel-collapse collapse">
+                            <div id="collapse5" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -173,10 +212,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-clock-o"></i>Registro E/S</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><i class="fa fa-clock-o"></i>Registro E/S</a>
                                 </h4>
                             </div>
-                            <div id="collapse5" class="panel-collapse collapse">
+                            <div id="collapse6" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
@@ -206,10 +245,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><i class="fa fa-key"></i>Salir</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7"><i class="fa fa-key"></i>Salir</a>
                                 </h4>
                             </div>
-                            <div id="collapse6" class="panel-collapse collapse">
+                            <div id="collapse7" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
                                         <tr>
