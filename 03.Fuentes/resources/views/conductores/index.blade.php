@@ -18,9 +18,9 @@
         Driver</a>
     {!! Form::open([
     'method' => 'DELETE',
-    'route' => ['$conductores.destroy', $vehiculo->id]
+    'route' => ['$conductores.destroy', $conductor->id]
     ]) !!}
-    {!! Form::submit('Delete this vehicle?', ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit('Delete this driver?', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
 </p>
 <hr>

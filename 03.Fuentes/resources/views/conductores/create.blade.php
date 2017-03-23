@@ -62,16 +62,7 @@ Nuevo Registro Conductor
 
 
 
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-2">
-                <h3>{!! Form::label('modeloV', 'Modelo', ['class' => 'label label-default']) !!} </h3>
-            </div>
-            <div class="col-md-3">
-                <h3>{!! Form::text('modeloV', null, ['class' => 'form-control']) !!} </h3>
-            </div>
-        </div>
-    </div>
+
 
     <div class="form-group">
         <div class="row">
@@ -79,10 +70,24 @@ Nuevo Registro Conductor
                 <h3>{!! Form::label('tipo_doc', 'Numero', ['class' => 'label label-default']) !!} </h3>
             </div>
             <div class="col-md-3">
-                <h3>{!! Form::select('tipo_doc', ['CC' => 'CC', 'TI' => 'TI', 'CE' => 'CE'], null) !!} </h3>
+                <h3>{!! Form::select('tipo_doc', ['CC' => 'CC', 'TI' => 'TI', 'CE' => 'CE'], null, ['class' => 'form-control']) !!} </h3>
             </div>
         </div>
     </div>
+
+
+    <div class="form-group">
+        <div class="row">
+
+            <div class="col-md-3">
+                <h3>{!! Form::label('numero_doc', 'Numero', ['class' => 'label label-default']) !!} </h3>
+            </div>
+            <div class="col-md-4">
+                <h3>{!! Form::number('numero_doc', null, ['class' => 'form-control']) !!} </h3>
+            </div>
+        </div>
+    </div>
+
 
     <div class="form-group">
         <div class="row">
@@ -95,10 +100,6 @@ Nuevo Registro Conductor
             </div>
         </div>
     </div>
-
-
-
-
 
 
     <div class="form-group">

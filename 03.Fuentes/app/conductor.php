@@ -1,12 +1,12 @@
 <?php
 
 namespace App;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use App\Vehiculo;
-
-
+use App\Conductor;
 
 class Conductor extends Model
 {

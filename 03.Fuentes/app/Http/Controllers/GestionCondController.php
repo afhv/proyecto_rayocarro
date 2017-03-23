@@ -1,8 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Session;
+use App\Conductor;
+use Illuminate\Support\Facades\Log;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class GestionCondController extends Controller
 {
@@ -26,8 +32,9 @@ class GestionCondController extends Controller
             'nombreC' => 'required | string | alpha_dash | max:20',
             'apellidoC' => 'required |string | max:20',
             'tipo_doc' => 'required | string | alpha_dash | max:20',
-            'numero_doc' => 'required |number | max:20',
+            'numero_doc' => 'required| min:6 | max:12',
             'generoC' => 'required | string | alpha_dash | max:20']);
+
         $input = $request->all();
         Conductor::create($input);
         Session::flash('flash_message_ok', 'Driver successfully added!');

@@ -30,7 +30,7 @@ Nuevo Registro Vehiculo
         <div class="row">
 
             <div class="col-md-3">
-                <h3>{!! Form::label('f_ingreso', 'Fecha Ingreso', ['class' => 'label label-default']) !!} </h3>
+                <h4>{!! Form::label('f_ingreso', 'Fecha Ingreso', ['class' => 'label label-default']) !!} </h4>
             </div>
             <div class="col-md-4">
                 <h3>{!! Form::date('f_ingreso', \Carbon\Carbon::now()) !!} </h3>
