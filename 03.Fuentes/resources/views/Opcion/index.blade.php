@@ -38,12 +38,17 @@ Listado Opciones Menu
             <td class="col-md-4">
                 <table>
                     <tr>
+                       @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Opciones','Ver'))
                         <td>
                             <a href="{{ route('opcions.show', $opcion->id) }}" class="btn btn-primary">Ver</a>
                         </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Opciones','Editar'))
                         <td>
                             <a href="{{ route('opcions.edit', $opcion->id) }}" class="btn btn-primary">Editar</a>
                         </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Opciones','Eliminar'))
                         <td>
                             {!! Form::open([
                             'method' => 'DELETE',
@@ -52,6 +57,7 @@ Listado Opciones Menu
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                             {!! Form::close() !!}
                         </td>
+                        @endif
                     </tr>
                 </table>
             </td>

@@ -25,18 +25,28 @@ Listado Perfiles
             <td class="col-md-8">
                 {{ $perfil->nombre }}
             </td>
+            @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Perfiles','Opciones'))
             <td>
-                <a href="{{ route('perfils.show', $perfil->id) }}" class="btn btn-primary">Opciones</a>
+                <a href="{{ route('opcionperfil.edit', $perfil->id) }}" class="btn btn-primary">Opciones</a>
             </td>
+            @else
+            <td>
+            </td>
+            @endif
             <td class="col-md-4">
                 <table>
                     <tr>
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Perfiles','Ver'))
                         <td>
                             <a href="{{ route('perfils.show', $perfil->id) }}" class="btn btn-primary">Ver</a>
                         </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Perfiles','Editar'))
                         <td>
                             <a href="{{ route('perfils.edit', $perfil->id) }}" class="btn btn-primary">Editar</a>
                         </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Perfiles','Eliminar'))
                         <td>
                             {!! Form::open([
                             'method' => 'DELETE',
@@ -45,6 +55,7 @@ Listado Perfiles
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                             {!! Form::close() !!}
                         </td>
+                        @endif
                     </tr>
                 </table>
             </td>
