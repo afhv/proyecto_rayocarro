@@ -11,16 +11,17 @@
 <p>{{ $conductor->tipo_doc }}</p>
 <p>{{ $conductor->numero_doc }}</p>
 <p>{{ $conductor->generoC }}</p>
+
 <p>
-    <a href="{{ route('$conductores.show', $conductor->id) }}" class="btn btn-primary">View
-        Driver</a>
-    <a href="{{ route('$conductores.edit', $conductor->id) }}" class="btn btn-primary">Edit
-        Driver</a>
+    <a href="{{ route('conductores.show', $conductor->id) }}" class="btn btn-primary">View
+        Vehicle</a>
+    <a href="{{ route('conductores.edit', $conductor->id) }}" class="btn btn-primary">Edit
+        Vehicle</a>
     {!! Form::open([
     'method' => 'DELETE',
-    'route' => ['$conductores.destroy', $conductor->id]
+    'route' => ['conductores.destroy', $conductor->id]
     ]) !!}
-    {!! Form::submit('Delete this driver?', ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit('Delete this vehicle?', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
 </p>
 <hr>

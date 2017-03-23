@@ -22,7 +22,7 @@ Nuevo Registro Conductor
 
 
 {!! Form::open(['route' => 'conductores.store']) !!}
-{!! Form::hidden('vehiculo_id', 2) !!}
+{!! Form::hidden('vehiculo_id', 1) !!}
 <form action="/conductores/create" method="post">
 
 

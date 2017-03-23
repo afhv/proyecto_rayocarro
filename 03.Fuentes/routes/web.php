@@ -44,12 +44,12 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('users1/find', 'UserController@index');
     Route::get('vehiculos', 'GestionVehController@index');
     Route::get('vehiculos/create', 'GestionVehController@create');
-});
 
-Route::group(['middleware' => 'auth'], function() {
+
     Route::resource('conductores', 'GestionCondController');
-    Route::resource('vehiculos', 'GestionVehController');
-    Route::get('vehiculos1/find', 'GestionVehController@index');
     Route::get('conductores', 'GestionCondController@index');
+    Route::get('vehiculos1/find', 'GestionVehController@index');
     Route::get('conductores/create', 'GestionCondController@create');
 });
+
+

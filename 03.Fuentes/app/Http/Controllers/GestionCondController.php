@@ -29,7 +29,7 @@ class GestionCondController extends Controller
 
         $this->validate($request, [
             'f_registroC' => 'required | date',
-            'nombreC' => 'required | string | alpha_dash | max:20',
+            'nombreC' => 'required | string | max:20',
             'apellidoC' => 'required |string | max:20',
             'tipo_doc' => 'required | string | alpha_dash | max:20',
             'numero_doc' => 'required| min:6 | max:12',
@@ -42,6 +42,29 @@ class GestionCondController extends Controller
 
 
     }
+
+
+    public function index(Request $request)
+    {
+        $conductores = Conductor::all();
+        return view('conductores.index', ['list' => $conductores]);
+    }
+
+
+    public function show(Request $request, $id)
+    {
+        try
+        {
+            $conductores = Conductor::findOrFail($id);
+            return view('conductores.show', ['data' => $conductores]);
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "El vehiculo de placa ($id) no ha sido enconrtrado!");
+            return redirect()->back();
+        }
+    }
+
 }
 
 
