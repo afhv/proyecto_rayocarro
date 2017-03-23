@@ -16,7 +16,6 @@ Nuevo Registro Conductor
 
 
 {!! Form::open(['route' => 'conductores.store']) !!}
-{!! Form::hidden('vehiculo_id', 1) !!}
 <form action="/conductores/create" method="post">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -63,6 +62,4 @@ Nuevo Registro Conductor
 
     {!! Form::close() !!}
 </form>
-
-
 @stop

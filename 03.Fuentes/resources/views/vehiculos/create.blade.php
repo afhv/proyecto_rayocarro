@@ -4,12 +4,6 @@ Nuevo Registro Vehiculo
 @stop
 
 @section('breadcrumb')
-<li><a href="\">Inicio</a></li>
-<li><a href="{{ url('\vehiculos\index') }}">Registro Vehiculo</a></li>
-<li class="active">Nuevo</li>
-@stop
-
-
 @section('content')
 
 @if($errors->any())
@@ -24,91 +18,41 @@ Nuevo Registro Vehiculo
 {!! Form::open(['route' => 'vehiculos.store']) !!}
 {!! Form::hidden('user_id', 2) !!}
 <form action="/vehiculos/create" method="post">
-
-
-    <div class="form-group">
-        <div class="row">
-
-            <div class="col-md-3">
-                <h4>{!! Form::label('f_ingreso', 'Fecha Ingreso', ['class' => 'label label-default']) !!} </h4>
-            </div>
-            <div class="col-md-4">
-                <h3>{!! Form::date('f_ingreso', \Carbon\Carbon::now()) !!} </h3>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="row">
-
-            <div class="col-md-1">
-                <h3>{!! Form::label('placaV', 'Placa', ['class' => 'label label-default']) !!} </h3>
-            </div>
-            <div class="col-md-2">
-                <h3>{!! Form::text('placaV', null, ['class' => 'form-control']) !!} </h3>
-            </div>
-
-            <div class="col-md-3">
-                <h3>{!! Form::label('marcaV', 'Marca', ['class' => 'label label-default']) !!} </h3>
-            </div>
-            <div class="col-md-4">
-                <h3>{!! Form::text('marcaV', null, ['class' => 'form-control']) !!} </h3>
-            </div>
-
-
-        </div>
-    </div>
-
-
-
-
-
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-2">
-                <h3>{!! Form::label('modeloV', 'Modelo', ['class' => 'label label-default']) !!} </h3>
-            </div>
-            <div class="col-md-3">
-                <h3>{!! Form::text('modeloV', null, ['class' => 'form-control']) !!} </h3>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-2">
-                <h3>{!! Form::label('colorV', 'Color', ['class' => 'label label-default']) !!} </h3>
-            </div>
-            <div class="col-md-3">
-                <h3>{!! Form::radio('colorV', 'Blanco', ['class' => 'form-control']) !!}</h3><br>
-                <h3>{!! Form::radio('colorV', 'Negro',['class' => 'form-control']) !!}</h3><br>
-                <h3>{!! Form::radio('colorV', 'Amarillo', ['class' => 'form-control']) !!}</h3><br>
-                <h3>{!! Form::radio('colorV', 'Rojo',['class' => 'form-control']) !!}</h3><br>
-                <h3>{!! Form::radio('colorV', 'Verde', ['class' => 'form-control']) !!}</h3><br>
-                <h3>{!! Form::radio('colorV', 'Gris',['class' => 'form-control']) !!}</h3>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-2">
-                        {!! Form::submit('Registrar', ['class' => 'btn btn-default']) !!}
-                    </div>
-                    <div class="col-md-2">
-                        {!! Form::reset('Cancelar', ['class' => 'btn btn-default']) !!}
-                    </div>
-                    <div class="col-md-4"></div>
+                {!! Form::date('f_ingreso', \Carbon\Carbon::now(), ['class' => 'form-control', 'placeholder' => 'Fecha ingreso vehiculo']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::text('placaV', null, ['class' => 'form-control', 'placeholder' => 'Placa vehiculo']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::select('marcaV', [''=>'Seleccione marca del vehiculo','Fiat' => 'Fiat', 'Toyota' => 'Toyota', 'Mazda' => 'Mazda','Renoult' => 'Renoult', 'Ford' => 'Ford','BMW' => 'BMW'], null, ['class' => 'form-control']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::text('modeloV', null, ['class' => 'form-control', 'placeholder' => 'Modelo']) !!}
+            </div>
+            <div class="form-group">
+                <div class="radio">
+                    <label>{!! Form::radio('colorV', 'Blanco') !!}Femenino</label>
+                    <label>{!! Form::radio('colorV', 'Azul') !!}Masculino</label>
+                    <label>{!! Form::radio('colorV', 'Rojo') !!}Femenino</label>
+                    <label>{!! Form::radio('colorV', 'Negro') !!}Masculino</label>
+                    <label>{!! Form::radio('colorV', 'Gris') !!}Femenino</label>
+                    <label>{!! Form::radio('colorV', 'Verde') !!}Masculino</label>
+                    <label>{!! Form::radio('colorV', 'Amarillo') !!}Femenino</label>
+                    <label>{!! Form::radio('colorV', 'Otro') !!}Masculino</label>
                 </div>
             </div>
-            {!! Form::close() !!}
-            </form>
 
+            <div class="form-group">
+                {!! Form::submit('Registrar', ['class' => 'btn btn-success']) !!}
+                {!! Form::reset('Cancelar', ['class' => 'btn btn-danger']) !!}
+            </div>
+        </div>
 
-        @stop
+    </div>
+
+    {!! Form::close() !!}
+</form>
+@stop
