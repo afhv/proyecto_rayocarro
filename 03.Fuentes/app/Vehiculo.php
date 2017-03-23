@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use App\User;
-
+use App\Conductor;
 
 class Vehiculo extends Model
 {
@@ -20,4 +20,13 @@ class Vehiculo extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function conductor()
+    {
+        return $this->hasOne('App\Conductor');
+    }
+
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }

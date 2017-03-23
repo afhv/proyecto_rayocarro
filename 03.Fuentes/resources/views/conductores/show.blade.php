@@ -27,7 +27,10 @@
         <td style="width: 200px;">Vehiculo</td>
         <td>{{ $data->vehiculo_id }}</td>
     </tr>
-
+    <tr>
+        <td style="width: 200px;">Placa Vehiculo</td>
+        <td>{{ $data->vehiculo->placaV }}</td>
+    </tr>
 </table>
 <hr>
 <a href="{{ route('conductores.edit', $data->id) }}" class="btn btn-primary">Edit

@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use App\Conductor;
+use App\Vehiculo;
 use Illuminate\Support\Facades\Log;
-
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 
 class GestionCondController extends Controller
@@ -17,7 +16,10 @@ class GestionCondController extends Controller
     //Para agregar:
     public function create(Request $request)
     {
-        return view('conductores.create');
+        $vehiculos = Vehiculo::all();
+        //dd($vehiculos);
+        return view('conductores.create')->with('vehiculos',$vehiculos);
+
     }
 
 
@@ -33,7 +35,7 @@ class GestionCondController extends Controller
             'apellidoC' => 'required |string | max:20',
             'tipo_doc' => 'required | string | alpha_dash | max:20',
             'numero_doc' => 'required| min:6 | max:12',
-            'generoC' => 'required | string | alpha_dash | max:20']);
+            'generoC' => 'required | string | alpha_dash | max:20',]);
 
         $input = $request->all();
         Conductor::create($input);

@@ -43,14 +43,8 @@ class User extends Authenticatable
         return $this->hasMany('App\Vehiculo');
     }
 
-    /*public function conductores()
-    {
-        return $this->hasMany('App\Product');
-    }
 
 
-
-    */
 
 
     public function setPasswordAttribute($plainPassword){

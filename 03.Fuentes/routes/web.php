@@ -21,12 +21,6 @@ Route::get('/test', function() {
 });
 
 
-Route::get('RegistroES/new', 'RegistroESController@new');
-Route::post('RegistroES/save', 'RegistroESController@save');
-Route::get('RegistroES/search', 'RegistroESController@search');
-Route::get('RegistroES/find', 'RegistroESController@find');
-Route::get('RegistroES/delete', 'RegistroESController@delete');
-
 Route::get('RayoCarro/index', 'SitioController@index');
 
 
@@ -45,11 +39,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('vehiculos', 'GestionVehController@index');
     Route::get('vehiculos/create', 'GestionVehController@create');
 
-
-    Route::resource('conductores', 'GestionCondController');
-    Route::get('conductores', 'GestionCondController@index');
-    Route::get('vehiculos1/find', 'GestionVehController@index');
-    Route::get('conductores/create', 'GestionCondController@create');
 });
 
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('conductores', 'GestionCondController');
+    Route::get('conductores/create', 'GestionCondController@create');
+});
 

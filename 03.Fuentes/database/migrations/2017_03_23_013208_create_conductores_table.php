@@ -23,12 +23,11 @@ class CreateConductoresTable extends Migration
             $table->string('tipo_doc', 20)->nullable();
             $table->string('generoC', 20)->nullable();
             $table->integer('vehiculo_id')->unsigned();
-
+            $table->timestamps();
             $table->foreign('vehiculo_id')->references('id')->on('vehiculos')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->rememberToken();
-            $table->timestamps();
+
         });
     }
 
