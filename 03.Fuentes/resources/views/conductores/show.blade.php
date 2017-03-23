@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<h1>{{ $data->placaV }}</h1>
-<p class="lead">Vehiculo</p>
+<h1>{{ $data->numero_doc }}</h1>
+<p class="lead">Conductor</p>
 <table class="table table-striped table-hover">
     <tr>
         <td style="width: 200px;">Fecha de registro</td>
@@ -36,7 +36,7 @@
 'method' => 'DELETE',
 'route' => ['conductores.destroy', $data->id]
 ]) !!}
-{!! Form::submit('Delete this vehicle?', ['class' => 'btn btn-danger']) !!}
+{!! Form::submit('Delete this driver?', ['class' => 'btn btn-danger']) !!}
 {!! Form::close() !!}
-<a href="{{ url('\conductores\index')}}" class="btn btn-info">Back to all vehicles</a>
+<a href="{{ url('\conductores\index')}}" class="btn btn-info">Back to all drivers</a>
 @stop

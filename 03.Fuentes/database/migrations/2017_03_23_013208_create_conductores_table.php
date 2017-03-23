@@ -17,10 +17,10 @@ class CreateConductoresTable extends Migration
             $table->increments('id');
 
             $table->date('f_registroC')->nullable();
+            $table->string('numero_doc', 12)->unique();
             $table->string('nombreC', 20)->nullable();
             $table->string('apellidoC', 20)->nullable();
             $table->string('tipo_doc', 20)->nullable();
-            $table->integer('numero_doc', 12)->unique();
             $table->string('generoC', 20)->nullable();
             $table->integer('vehiculo_id')->unsigned();
 
@@ -43,7 +43,6 @@ class CreateConductoresTable extends Migration
             $table->dropUnique(['numero_doc']);
             $table->dropForeign(['vehiculo_id']);
         });
-
         Schema::dropIfExists('conductores');
     }
 }

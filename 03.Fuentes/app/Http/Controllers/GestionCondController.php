@@ -65,6 +65,69 @@ class GestionCondController extends Controller
         }
     }
 
+
+    public function edit(Request $request, $id)
+    {
+        try
+        {
+            $conductores = Conductor::findOrFail($id);
+            return view('conductores.edit', ['data' => $conductores]);
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "The Driver ($id) could not be found to be
+edited!");
+            return redirect()->back();
+        }
+    }
+
+
+
+    //Para editar
+    public function update(Request $request, $id)
+    {
+        try
+        {
+            $conductores = Conductor::findOrFail($id);
+            $this->validate($request, [
+                'f_registroC' => 'required | date',
+                'nombreC' => 'required | string | max:20',
+                'apellidoC' => 'required |string | max:20',
+                'tipo_doc' => 'required | string | alpha_dash | max:20',
+                'numero_doc' => 'required| min:6 | max:12',
+                'generoC' => 'required | string | alpha_dash | max:20']);
+            $input = $request->all();
+            $conductores->fill($input)->save();
+            Session::flash('flash_message', 'Driver successfully edited!');
+            return redirect('/conductores');
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "The Driver ($id) could not be found to be
+edited!");
+            return redirect()->back();
+        }
+
+    }
+
+    //para eliminar
+    public function destroy(Request $request, $id)
+    {
+        try
+        {
+            $conductores = Conductor::findOrFail($id);
+            $conductores ->delete();
+            Session::flash('flash_message', 'Driver successfully deleted!');
+            return redirect('/conductores');
+        }
+        catch(ModelNotFoundException $e)
+        {
+            Session::flash('flash_message', "The Driver ($id) could not be found to be
+deleted!");
+            return redirect()->back();
+        }
+    }
+
 }
 
 
