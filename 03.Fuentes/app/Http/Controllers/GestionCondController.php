@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\Hash;
 
 class GestionCondController extends Controller
 {
+    public function registroC() {
+        return view('RegistroC.RegistroC');
 
+    }
 
     //Para agregar:
     public function create(Request $request)
@@ -52,6 +55,12 @@ class GestionCondController extends Controller
         return view('conductores.index', ['list' => $conductores]);
     }
 
+    public function findC() {
+        return view('RegistroC.FindC');
+    }
+
+    public function searchC() {
+        return view('RegistroC.SearchC');
 
     public function show(Request $request, $id)
     {
@@ -131,6 +140,3 @@ deleted!");
     }
 
 }
-
-
-

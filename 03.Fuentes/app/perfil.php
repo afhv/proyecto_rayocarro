@@ -15,4 +15,9 @@ class Perfil extends Model
     {
         return $this->hasMany('App\User');
     }
+
+    public function opcions()
+    {
+        return $this->belongsToMany('App\Opcion')->withTimestamps();
+    }
 }

@@ -35,12 +35,17 @@ Listado Personas
             <td class="col-md-3">
                 <table>
                     <tr>
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Personas','Ver'))
                         <td>
                             <a href="{{ route('personas.show', $persona->id) }}" class="btn btn-primary">Ver</a>
                         </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Personas','Editar'))
                         <td>
                             <a href="{{ route('personas.edit', $persona->id) }}" class="btn btn-primary">Editar</a>
                         </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Personas','Eliminar'))
                         <td>
                             {!! Form::open([
                             'method' => 'DELETE',
@@ -49,6 +54,7 @@ Listado Personas
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                             {!! Form::close() !!}
                         </td>
+                        @endif
                     </tr>
                 </table>
             </td>

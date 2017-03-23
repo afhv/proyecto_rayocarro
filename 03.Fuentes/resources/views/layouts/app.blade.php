@@ -26,6 +26,7 @@
             <div class="row">
                 <div class="col-sm-3 col-md-3">
                     <div class="panel-group" id="accordion">
+                        @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Perfiles'))
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -35,104 +36,105 @@
                             <div id="collapse1" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Perfiles','Listar'))
                                         <tr>
                                             <td>
                                                 <i class="fa fa-server"></i><a href="{{ url ('perfils') }}">Listar</a>
                                             </td>
                                         </tr>
+                                        @endif
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Perfiles','Crear'))
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url('perfils/create') }}">Nuevo</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-search-plus"></i><a href="#">Consultar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-pencil"></i><a href="#">Modificar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-eraser"></i><a href="#">Eliminar</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <table class="table">
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-server"></i><a href="{{ url ('options') }}">Opciones</a>
-                                            </td>
-                                        </tr>
+                                        @endif
                                     </table>
                                 </div>
                             </div>
                         </div>
+                        @endif
+                        @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Opciones'))
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><i class="fa fa-user-circle"></i>Usuarios</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><i class="fa fa-book"></i>Opciones</a>
                                 </h4>
                             </div>
                             <div id="collapse2" class="panel-collapse collapse">
                                 <div class="panel2 panel-body">
                                     <table class="table">
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Opciones','Listar'))
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-server"></i><a href="{{ url ('opcions') }}">Listar</a>
+                                            </td>
+                                        </tr>
+                                        @endif
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Opciones','Crear'))
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url ('opcions\create') }}">Nuevo</a>
+                                            </td>
+                                        </tr>
+                                        @endif
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Usuarios'))
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-user-circle"></i>Usuarios</a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel2 panel-body">
+                                    <table class="table">
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Usuarios','Listar'))
                                         <tr>
                                             <td>
                                                 <i class="fa fa-server"></i><a href="{{ url ('users') }}">Listar</a>
                                             </td>
                                         </tr>
+                                        @endif
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Opciones','Crear'))
                                         <tr>
                                             <td>
                                                 <i class="fa fa-plus-circle"></i><a href="{{ url ('users\create') }}">Nuevo</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-search-plus"></i><a href="{{ url('users1\find') }}">Consultar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-pencil"></i><a href="\RegistroU\search">Modificar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-eraser"></i><a href="\RegistroU\delete">Eliminar</a>
-                                            </td>
-                                        </tr>
+                                        @endif
                                     </table>
-
                                 </div>
                             </div>
                         </div>
+                        @endif
+                        @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Conductores'))
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-car"></i>Vehiculos</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-user-o"></i>Conductores</a>
                                 </h4>
                             </div>
                             <div id="collapse4" class="panel-collapse collapse">
-                                <div class="panel-body">
+                                <div class="panel2 panel-body">
                                     <table class="table">
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Conductores','Listar'))
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="\vehiculos\create">Nuevo</a>
+                                                <i class="fa fa-server"></i><a href="{{ url ('personas') }}">Listar</a>
                                             </td>
                                         </tr>
+
                                         <tr>
                                             <td>
-                                                <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-search-plus"></i><a href="\vehiculos\show">Consultar</a>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url ('personas\create') }}">Nuevo</a>
                                             </td>
                                         </tr>
 
@@ -140,34 +142,37 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
+                        @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Vehiculos'))
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-user-o"></i>Conductores</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-car"></i>Vehiculos</a>
                                 </h4>
                             </div>
                             <div id="collapse5" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Vehiculos','Listar'))
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="\conductores\create">Nuevo</a>
+                                                <i class="fa fa-server"></i><a href="{{ url ('vehiculos') }}">Listar</a>
                                             </td>
                                         </tr>
+                                        @endif
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Vehiculos','Crear'))
                                         <tr>
                                             <td>
-                                                <i class="fa fa-search-plus"></i><a href="{{ url ('conductores') }}">Consultar</a>
+                                                <i class="fa fa-plus-circle"></i><a href="\vehiculos\create">Nuevo</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-pencil"></i><a href="\vehiculos\create">Modificar</a>
-                                            </td>
-                                        </tr>
+                                        @endif
                                     </table>
                                 </div>
                             </div>
                         </div>
+                        @endif
+                        @if (RayoCarroHelper::MostrarMenu(Auth::user()->perfil,'Registro E/S'))
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -177,30 +182,25 @@
                             <div id="collapse6" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <table class="table">
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Registro E/S','Listar'))
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="\RegistroES\new">Nuevo</a>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url('registros') }}">Listar</a>
                                             </td>
                                         </tr>
+                                        @endif
+                                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Registro E/S','Crear'))
                                         <tr>
                                             <td>
-                                                <i class="fa fa-search-plus"></i><a href="\RegistroES\search">Consultar</a>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url('registros/new') }}">Nuevo</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-pencil"></i><a href="\RegistroES\find">Modificar</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-eraser"></i><a href="\RegistroES\find">Eliminar</a>
-                                            </td>
-                                        </tr>
+                                        @endif
                                     </table>
                                 </div>
                             </div>
                         </div>
+                        @endif
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -262,6 +262,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
                 <!-- Scripts -->
                 {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
                 {!! Html::script('assets/js/bootstrap.min.js') !!}
