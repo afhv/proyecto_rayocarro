@@ -34,14 +34,14 @@ Nuevo Registro Vehiculo
             </div>
             <div class="form-group">
                 <div class="radio">
-                    <label>{!! Form::radio('colorV', 'Blanco') !!}Femenino</label>
-                    <label>{!! Form::radio('colorV', 'Azul') !!}Masculino</label>
-                    <label>{!! Form::radio('colorV', 'Rojo') !!}Femenino</label>
-                    <label>{!! Form::radio('colorV', 'Negro') !!}Masculino</label>
-                    <label>{!! Form::radio('colorV', 'Gris') !!}Femenino</label>
-                    <label>{!! Form::radio('colorV', 'Verde') !!}Masculino</label>
-                    <label>{!! Form::radio('colorV', 'Amarillo') !!}Femenino</label>
-                    <label>{!! Form::radio('colorV', 'Otro') !!}Masculino</label>
+                    <label>{!! Form::radio('colorV', 'Blanco') !!}Blanco</label>
+                    <label>{!! Form::radio('colorV', 'Azul') !!}Azul</label>
+                    <label>{!! Form::radio('colorV', 'Rojo') !!}Rojo</label>
+                    <label>{!! Form::radio('colorV', 'Negro') !!}Negro</label>
+                    <label>{!! Form::radio('colorV', 'Gris') !!}Gris</label>
+                    <label>{!! Form::radio('colorV', 'Verde') !!}Verde</label>
+                    <label>{!! Form::radio('colorV', 'Amarillo') !!}Amarillo</label>
+                    <label>{!! Form::radio('colorV', 'Otro') !!}Otro</label>
                 </div>
             </div>
 
