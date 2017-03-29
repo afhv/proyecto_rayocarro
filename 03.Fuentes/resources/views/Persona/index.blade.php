@@ -17,6 +17,7 @@ Listado Personas
             <th>Documento</th>
             <th>Nombre</th>
             <th>Apellido</th>
+            <th>Vehiculos</th>
             <th></th>
         </tr>
     </thead>
@@ -31,21 +32,29 @@ Listado Personas
             </td>
             <td class="col-md-3">
                 {{ $persona->apellido }}
-            </td>S
+            </td>
+            @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Conductores','Vehiculos'))
+            <td>
+                <a href="{{ route('conductorsV.edit', $persona->id) }}" class="btn btn-primary">Vehiculos</a>
+            </td>
+            @else
+            <td>
+            </td>
+            @endif
             <td class="col-md-3">
                 <table>
                     <tr>
-                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Personas','Ver'))
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Conductores','Ver'))
                         <td>
                             <a href="{{ route('personas.show', $persona->id) }}" class="btn btn-primary">Ver</a>
                         </td>
                         @endif
-                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Personas','Editar'))
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Conductores','Editar'))
                         <td>
                             <a href="{{ route('personas.edit', $persona->id) }}" class="btn btn-primary">Editar</a>
                         </td>
                         @endif
-                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Personas','Eliminar'))
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Conductores','Eliminar'))
                         <td>
                             {!! Form::open([
                             'method' => 'DELETE',

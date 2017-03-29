@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Hash;
 
 class GestionCondController extends Controller
 {
-    public function registroC() {
-        return view('RegistroC.RegistroC');
-
-    }
-
     //Para agregar:
     public function create(Request $request)
     {
@@ -25,9 +20,7 @@ class GestionCondController extends Controller
 
     }
 
-
     //Para agregar:
-
     public function store(Request $request)
     {
         $input = $request->all();
@@ -44,8 +37,6 @@ class GestionCondController extends Controller
         Conductor::create($input);
         Session::flash('flash_message_ok', 'Driver successfully added!');
         return redirect(url('conductores/'));
-
-
     }
 
 
@@ -54,13 +45,6 @@ class GestionCondController extends Controller
         $conductores = Conductor::all();
         return view('conductores.index', ['list' => $conductores]);
     }
-
-    public function findC() {
-        return view('RegistroC.FindC');
-    }
-
-    public function searchC() {
-        return view('RegistroC.SearchC');
 
     public function show(Request $request, $id)
     {

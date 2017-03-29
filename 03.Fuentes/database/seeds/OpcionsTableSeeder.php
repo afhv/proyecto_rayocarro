@@ -181,6 +181,14 @@ class OpcionsTableSeeder extends Seeder
         ]);
 
         DB::table('opcions')->insert([
+            'menu' => 'Conductores',
+            'submenu' => 'Vehiculos',
+            'url' => '',
+            'created_at' => '2017-03-22 00:00:00',
+            'updated_at' => '2017-03-22 00:00:00',
+        ]);
+
+        DB::table('opcions')->insert([
             'menu' => 'Vehiculos',
             'submenu' => 'Crear',
             'url' => 'opcions/create',
@@ -216,6 +224,14 @@ class OpcionsTableSeeder extends Seeder
             'menu' => 'Vehiculos',
             'submenu' => 'Eliminar',
             'url' => 'opcions/delete',
+            'created_at' => '2017-03-22 00:00:00',
+            'updated_at' => '2017-03-22 00:00:00',
+        ]);
+
+        DB::table('opcions')->insert([
+            'menu' => 'Vehiculos',
+            'submenu' => 'Conductores',
+            'url' => '',
             'created_at' => '2017-03-22 00:00:00',
             'updated_at' => '2017-03-22 00:00:00',
         ]);

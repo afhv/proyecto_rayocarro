@@ -21,9 +21,9 @@ class Vehiculo extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function conductor()
+    public function conductors()
     {
-        return $this->hasOne('App\Conductor');
+        return $this->belongsToMany('App\Persona')->withTimestamps();
     }
 
     protected $hidden = [

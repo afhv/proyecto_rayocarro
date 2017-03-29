@@ -35,15 +35,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('personas', 'PersonaController');
     Route::resource('opcions', 'OpcionController');
     Route::resource('opcionperfil', 'OpcionPerfilController');
-
-    Route::get('users1/find', 'UserController@index');
-    Route::get('vehiculos', 'GestionVehController@index');
-    Route::get('vehiculos/create', 'GestionVehController@create');
-
-});
-
-Route::group(['middleware' => 'auth'], function() {
-    Route::resource('conductores', 'GestionCondController');
-    Route::get('conductores/create', 'GestionCondController@create');
+    Route::resource('registros','RegistroESController');
+    Route::resource('conductorsV', 'ConductorVehiculoController');
+    Route::resource('conductorsC', 'ConductorPersonaController');
+    Route::get('listas/listConductores/{id}', 'RayoCarroFunctionsController@obtainConductores');
 });
 

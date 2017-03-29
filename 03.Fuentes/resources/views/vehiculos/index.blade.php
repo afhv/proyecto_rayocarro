@@ -1,27 +1,75 @@
 @extends('layouts.app')
+
+@section('content_title')
+Listado Vehiculos
+@stop
+
+@section('breadcrumb')
+<li><a href="\">Inicio</a></li>
+<li class="active">Vehiculos</li>
+@stop
+
+
 @section('content')
-<h1>Vehicles List</h1>
-<p class="lead">Here's a list of all your vehicles.
-    <a href="{!! url('vehiculos/create') !!}">Add a new one?</a></p>
-<hr>
-@foreach($list as $vehiculo)
-<h3>{{ $vehiculo->f_ingreso }}</h3>
-<p>{{ $vehiculo->placaV }}</p>
-<p>{{ $vehiculo->marcaV }}</p>
-<p>{{ $vehiculo->modeloV }}</p>
-<p>{{ $vehiculo->color_V }}</p>
-<p>
-    <a href="{{ route('vehiculos.show', $vehiculo->id) }}" class="btn btn-primary">View
-        Vehicle</a>
-    <a href="{{ route('vehiculos.edit', $vehiculo->id) }}" class="btn btn-primary">Edit
-        Vehicle</a>
-    {!! Form::open([
-    'method' => 'DELETE',
-    'route' => ['vehiculos.destroy', $vehiculo->id]
-    ]) !!}
-    {!! Form::submit('Delete this vehicle?', ['class' => 'btn btn-danger']) !!}
-    {!! Form::close() !!}
-</p>
-<hr>
-@endforeach
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Conductores</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($list as $vehiculo)
+        <tr>
+            <td class="col-md-8">
+                {{ $vehiculo->placaV }}
+            </td>
+            <td class="col-md-8">
+                {{ $vehiculo->marcaV }}
+            </td>
+            <td class="col-md-8">
+
+                {{ $vehiculo->modeloV }}
+            </td>
+            @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Vehiculos','Conductores'))
+            <td>
+                <a href="{{ route('conductorsC.edit', $vehiculo->id) }}" class="btn btn-primary">Conductores</a>
+            </td>
+            @else
+            <td>
+            </td>
+            @endif
+            <td class="col-md-4">
+                <table>
+                    <tr>
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Vehiculos','Ver'))
+                        <td>
+                            <a href="{{ route('vehiculos.show', $vehiculo->id) }}" class="btn btn-primary">Ver</a>
+                        </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Vehiculos','Editar'))
+                        <td>
+                            <a href="{{ route('vehiculos.edit', $vehiculo->id) }}" class="btn btn-primary">Editar</a>
+                        </td>
+                        @endif
+                        @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Vehiculos','Eliminar'))
+                        <td>
+                            {!! Form::open([
+                            'method' => 'DELETE',
+                            'route' => ['vehiculos.destroy', $vehiculo->id]
+                            ]) !!}
+                            {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
+                            {!! Form::close() !!}
+                        </td>
+                        @endif
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 @stop

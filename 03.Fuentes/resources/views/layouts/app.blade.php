@@ -192,7 +192,7 @@
                                         @if (RayoCarroHelper::MostrarSubmenu(Auth::user()->perfil,'Registro E/S','Crear'))
                                         <tr>
                                             <td>
-                                                <i class="fa fa-plus-circle"></i><a href="{{ url('registros/new') }}">Nuevo</a>
+                                                <i class="fa fa-plus-circle"></i><a href="{{ url('registros/create') }}">Nuevo</a>
                                             </td>
                                         </tr>
                                         @endif
