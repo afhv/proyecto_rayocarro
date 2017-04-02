@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Parqueadero Rayo - Carro</title>
 
-        <link href="{{asset('css/bootstrap.css') }}" rel="stylesheet">
-        <link href="{{asset('css/estilo.css') }}" rel="stylesheet">
-        <link href="{{asset('css/font-awesome.css') }}" rel="stylesheet">
+        <link href="{{asset('/css/bootstrap.css', Request::secure()) }}" rel="stylesheet">
+        <link href="{{asset('/css/estilo.css', Request::secure()) }}" rel="stylesheet">
+        <link href="{{asset('/css/font-awesome.css', Request::secure()) }}" rel="stylesheet">
     </head>
     <body>
         <div class="container">

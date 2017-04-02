@@ -22,7 +22,7 @@ class CreateRegistrosTable extends Migration
             $table->integer('usuario_id');
             $table->timestamps();
 
-            $table->foreign('conductor_id')->references('id')->on('conductors');
+            $table->foreign('conductor_id')->references('id')->on('persona_vehiculo');
             $table->foreign('usuario_id')->references('id')->on('users');
         });
     }
