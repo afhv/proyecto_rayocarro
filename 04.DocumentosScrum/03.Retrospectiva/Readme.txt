@@ -1,1 +1,0 @@
-Se colocarán aqui los resultados de la retrospectiva al terminar el Sprint
