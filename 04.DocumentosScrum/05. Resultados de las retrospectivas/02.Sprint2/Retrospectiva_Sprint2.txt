@@ -1,0 +1,44 @@
+1) Qué cosas han funcionado bien.
+-- Yaneth --
+	Trabajo en scrum
+	Asignación de tareas para esta segunda fase
+  	Creacion y aplicacion de las migraciones asignadas
+	Codificación de las vistas correspondientes
+	Creación de los metodos que permiten hacer gestión de la información del sistema.
+	Manejo de bootstrap
+	
+-- Andres --
+	Trabajo en scrum
+	Asignación de tareas para esta segunda fase
+  	Creacion y aplicacion de las migraciones asignadas
+	Codificación de las vistas correspondientes
+	Manejo y gestion de sesiones
+	Creación de los metodos que permiten hacer gestión de la información del sistema.
+	Manejo de bootstrap
+	Manejo de Heroku
+
+2) Cuales hay que mejorar.
+-- Yaneth --
+	Cumplimiento en tiempos de entregables.
+ 	Percances con el archivo database.sqlite
+	Respetar la asignación de tareas o hacer modificación en el tablero Trello
+-- Andres --
+	Cumplimiento en tiempos de entregables.
+ 	Percances con el archivo database.sqlite
+	Comentar cambios en el tablero Trello
+	
+3) Qué ha aprendido.
+-- Yaneth --
+	Estructura y programación con Laravel
+	Creación de migraciones 
+	Creación de crud y formularios blade en laravel
+	Implementación de bootstrap en laravel
+	Creacion del sitio en Heroku
+	Cumplir con las reuniones de daily scrum
+-- Andres --
+	Estructura y programación con Laravel
+	Creación de migraciones 
+	Creación de crud y formularios blade en laravel
+	Implementación de bootstrap en laravel
+	Creacion del sitio en Heroku
+	Cumplir con las reuniones de daily scrum

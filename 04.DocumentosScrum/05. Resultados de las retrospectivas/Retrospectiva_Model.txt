@@ -1,0 +1,5 @@
+Se responderán los siguientes puntos:
+1) Qué cosas han funcionado bien.
+2) Cuales hay que mejorar.
+3) Qué cosas quiere probar/hacer en la siguiente iteración.
+4) Qué ha aprendido.
