@@ -1,0 +1,21 @@
+1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1) Se intentó configurar el entorno, pero se tuvieron errores. Se intentó incluso instalar aplicativos por aparte pero no funcionó
+2) Se realizará modificación del MER según los cambios encontrados con los mockups de conductor y se creará el SitioController
+3) Se tenía un problema con la versión de PHP, lo cual no permitía que Brackets funcionara correctamente
+
+-- Jhonathan --
+1) -- No se tiene información --
+2) -- No se tiene información --
+3) -- No se tiene información --
+
+-- Andrés --
+1) No pude trabajar
+2) Se construirá el controlador, la vista, la ruta y las opciones del menu para Crear registro E/S
+3) Ninguno
+
+
+ 

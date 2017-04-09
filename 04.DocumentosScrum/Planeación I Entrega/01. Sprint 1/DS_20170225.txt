@@ -1,0 +1,12 @@
+﻿1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+1) No aplica
+
+2) Todos: 
+	Se recibirá el enunciado del proyecto
+	Se realizará un modelado general, rápido de la estructura de tablas y formularios para la solución
+
+3) No aplica
+ 
