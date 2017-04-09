@@ -1,0 +1,21 @@
+1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1) Se repitieron los mockups integrandolos con el aplicativo seleccionado y se inició con el mockup de modificar conductor
+2) Se terminará el mockup de modificar conductor
+3) Ninguno
+
+-- Jhonathan --
+1) Se consigue que el proyecto compile correctamente
+2) Se construiran los mockups de vehiculo 
+3) Ninguno
+
+-- Andrés --
+1) Se construyeron los mockups de Creación registro E/S y de Eliminación registro E/S y se desarrolló una versión inicial del al vista genérica
+2) No puedo trabajar hoy
+3) Ninguno
+
+
+ 

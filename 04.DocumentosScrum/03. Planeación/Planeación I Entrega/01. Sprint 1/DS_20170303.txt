@@ -1,0 +1,21 @@
+1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1) Se construyó el mockup de de registro de conductor y el mockup de consulta de conductores 
+2) Se construirá el mockup de modificar conductor
+3) Se esta utilizando una herramienta diferente, pero desde hoy se estandarizará para usar todos la misma
+
+-- Jhonathan --
+1) Se descargó el código de la aplicación desde GitHub para ponerlo a funcionar localmente
+2) Se construirán los mockups de vehiculos
+3) No ha sido posible que funcione localmente, ya se tiene el archivo .env, pero aun no funciona
+
+-- Andrés --
+1) No pude trabajar
+2) Se construirán los mockups de Creación registro E/S y de Eliminación registro E/S 
+3) Ninguno
+
+
+ 

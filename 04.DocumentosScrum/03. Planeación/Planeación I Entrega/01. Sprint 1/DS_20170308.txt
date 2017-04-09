@@ -1,0 +1,19 @@
+1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1) Se modifica el MER y se crea el SitioController
+2) Se construirán los mockups de crear, modificar, consultar y eliminar vehiculo
+3) Ninguno
+
+-- Jhonathan --
+1) -- No se tiene información --
+2) -- No se tiene información --
+3) -- No se tiene información --
+
+-- Andrés --
+1) Se construyó el controlador, la vista, la ruta y las opciones del menu para Crear registro E/S
+2) Se configurará el menu con todas las opciones y se programará la ruta, controlador y vista para consultar y eliminar registro E/S
+3) Ninguno
+ 

@@ -1,0 +1,24 @@
+1) Qué se hizo ayer?
+2) Que se hará hoy?
+3) Que problemas se han tenido?
+
+-- Yaneth  --
+1)Se configuro ambiente de desarrollo
+2)Clonar proyecto del Git
+Crear el controlador de conductores
+Crear las rutas de gestionar conductores 
+Crear las vistas de gestionar conductores
+3) Ninguno
+
+-- Jhonathan --
+1) No se trabajó
+2) No se trabajará
+3) Ninguno
+
+-- Andrés --
+1) Se crea el proyecto en GitHub, se crea el proyecto Laravel, se crea la estructura de directorios y se configura Bootstrap
+2) Se creará el modelo entidad - relación 
+3) Ninguno
+
+
+ 
